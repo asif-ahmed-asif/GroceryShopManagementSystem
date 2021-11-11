@@ -68,8 +68,8 @@
     <Compile Include="Customer_Reg.Designer.cs">
       <DependentUpon>Customer_Reg.cs</DependentUpon>
     </Compile>
-    <None Include="DataAccess.cs.example" />
     <Compile Include="DataAccess.cs" />
+    <None Include="DataAccess.cs.example" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
