@@ -112,6 +112,11 @@ namespace Grocery_Shop_Management_System
             string salary = Convert.ToString(this.salarytxt.Text);
             string address = this.addresstxt.Text;
 
+            //Random rd = new Random();
+            //int x = rd.Next(999) + 10000;
+
+            //string password = (x + "");
+
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(date) || string.IsNullOrEmpty(salary) || string.IsNullOrEmpty(address))
             {
@@ -139,7 +144,9 @@ namespace Grocery_Shop_Management_System
                     access.Command.Parameters.Add("p8", OracleDbType.Varchar2).Value = "123";
                     access.Command.Parameters.Add("p9", OracleDbType.Varchar2).Value = "m";
                     access.Command.ExecuteNonQuery();
+
                     MessageBox.Show("Manager Successfully Inserted ");
+                    //MessageBox.Show("Manager Successfully Inserted with Password: " + password);
 
                     this.LoadManagerInfo();
                     this.Refresh();
