@@ -137,6 +137,7 @@ namespace Grocery_Shop_Management_System
             string sprice = this.spricetxt.Text;
             string quantity = this.qttxt.Text;
             string cid = this.ctxt.Text;
+            string cname = this.cnametxt.Text;
 
             if (string.IsNullOrEmpty(name))
             {
@@ -147,14 +148,19 @@ namespace Grocery_Shop_Management_System
             DataAccess access = new DataAccess();
 
             string query = "";
+            string insertProductQuery = "begin product_member_insert.AddProduct(:p1,:p2,:p3,:p4,:p5); end;";
+
 
             if (isNew == true)
             {
                 try
                 {
-                    query = "INSERT into Product(pid,name,p_price,s_price,quantity,cid) Values (Product_Seq.NEXTVAL, '" + name + "', " + pprice + ", " + sprice + ", " + quantity + ", " + cid + ")";
-
-                    access.Command = new OracleCommand(query, access.Connection);
+                    access.Command = new OracleCommand(insertProductQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = name;
+                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = pprice;
+                    access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = sprice;
+                    access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = quantity;
+                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = cname;
                     access.Command.ExecuteNonQuery();
 
                     MessageBox.Show("Product Successfully Inserted");

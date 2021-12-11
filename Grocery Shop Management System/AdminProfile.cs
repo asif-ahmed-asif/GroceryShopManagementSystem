@@ -71,16 +71,21 @@ namespace Grocery_Shop_Management_System
             string address = this.addresstxt.Text;
 
             DataAccess access = new DataAccess();
-            string query = "";
+
+            string updateManagerQuery = "begin UpdateAdmin(:p1,:p2,:p3,:p4,:p5); end;";
 
             if (isNew == true)
             {
-                query = "UPDATE Admin SET name = '" + name + "', phone = '" + phone + "', address = '" + address + "', email = '" + email + "' WHERE user_id = '" + x + "'";
-
-                access.Command = new OracleCommand(query, access.Connection);
+               
+                access.Command = new OracleCommand(updateManagerQuery, access.Connection);
 
                 try
                 {
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = name;
+                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = phone;
+                    access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = email;
+                    access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = address;
+                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = idtxt.Text;
                     if (access.Command.ExecuteNonQuery() == 0)
                     {
                         MessageBox.Show("Admin Update Failed");

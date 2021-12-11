@@ -106,14 +106,15 @@ namespace Grocery_Shop_Management_System
             DataAccess access = new DataAccess();
 
             string query = "";
+            string insertCategoryQuery = "begin product_member_insert.AddCategory(:p1); end;";
 
             if (isNew == true)
             {
                 try
                 {
-                    query = "INSERT into Category(cid,name) Values (Category_Seq.NEXTVAL, '" + name + "')";
+                    access.Command = new OracleCommand(insertCategoryQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = name;
 
-                    access.Command = new OracleCommand(query, access.Connection);
                     access.Command.ExecuteNonQuery();
 
                     MessageBox.Show("Category Successfully Inserted");
