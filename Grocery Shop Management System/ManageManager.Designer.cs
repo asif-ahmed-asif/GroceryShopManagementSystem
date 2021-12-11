@@ -487,6 +487,7 @@
             this.idtxt.Location = new System.Drawing.Point(140, 5);
             this.idtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.idtxt.Name = "idtxt";
+            this.idtxt.ReadOnly = true;
             this.idtxt.Size = new System.Drawing.Size(213, 25);
             this.idtxt.TabIndex = 77;
             this.idtxt.TabStop = false;
