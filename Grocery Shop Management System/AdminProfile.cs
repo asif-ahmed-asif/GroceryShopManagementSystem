@@ -75,8 +75,7 @@ namespace Grocery_Shop_Management_System
             string updateManagerQuery = "begin UpdateAdmin(:p1,:p2,:p3,:p4,:p5); end;";
 
             if (isNew == true)
-            {
-               
+            {  
                 access.Command = new OracleCommand(updateManagerQuery, access.Connection);
 
                 try

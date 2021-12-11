@@ -261,7 +261,6 @@
             this.cnametxt.Location = new System.Drawing.Point(140, 198);
             this.cnametxt.Name = "cnametxt";
             this.cnametxt.Size = new System.Drawing.Size(213, 25);
-            this.cnametxt.Sorted = true;
             this.cnametxt.TabIndex = 112;
             this.cnametxt.Text = "Category Name";
             // 

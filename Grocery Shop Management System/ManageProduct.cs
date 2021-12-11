@@ -236,7 +236,10 @@ namespace Grocery_Shop_Management_System
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            //this.Owner.Show();
+            //this.Hide();
+            AdminFrame af = new AdminFrame();
+            af.Visible = true;
             this.Hide();
         }
 
