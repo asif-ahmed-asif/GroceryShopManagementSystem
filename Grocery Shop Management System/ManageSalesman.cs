@@ -35,6 +35,7 @@ namespace Grocery_Shop_Management_System
         }
         private void LoadMgr()
         {
+            this.datetxt.MaxDate = DateTime.Now;
             DataAccess access = new DataAccess();
 
             string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm'";
@@ -148,30 +149,24 @@ namespace Grocery_Shop_Management_System
             DataAccess access = new DataAccess();
 
             string query = "";
-            string query1 = "";
+            string insertEmpQuery = "begin emp_sales_insert.AddEmployee(:p1,:p2,:p3,:p4,:p5,:p6,:p7,:p8,:p9); end;";
 
             if (isNew == true)
             {
-                query1 = "INSERT into Login(user_id,password,type) Values (Login_Seq.NEXTVAL, '" + password + "', 's')";
-
-                access.Command = new OracleCommand(query1, access.Connection);
-
-                if (access.Command.ExecuteNonQuery() == 1)
-                {
-                    query = "INSERT into Employee(id,user_id,name,phone,address,salary,join_date,email,mgr) Values (Employee_Seq.NEXTVAL, Login_Seq.CURRVAL, :p2, :p3, :p4, :p5, :p6, :p7, :p8)";
-                    access.Command = new OracleCommand(query, access.Connection);
-
-                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = nametxt.Text;
-                    access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = phonetxt.Text;
-                    access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = addresstxt.Text;
-                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = salarytxt.Text;
-                    access.Command.Parameters.Add("p6", OracleDbType.Varchar2).Value = datetxt.Text;
-                    access.Command.Parameters.Add("p7", OracleDbType.Varchar2).Value = emailtxt.Text;
-                    access.Command.Parameters.Add("p8", OracleDbType.Varchar2).Value = mgrtxt.Text;
 
                     try
                     {
-                        access.Command.ExecuteNonQuery();
+                       access.Command = new OracleCommand(insertEmpQuery, access.Connection);
+                       access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = name;
+                       access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = phone;
+                       access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = address;
+                       access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = salary;
+                       access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = date;
+                       access.Command.Parameters.Add("p6", OracleDbType.Varchar2).Value = email;
+                       access.Command.Parameters.Add("p7", OracleDbType.Varchar2).Value = mgr;
+                       access.Command.Parameters.Add("p8", OracleDbType.Varchar2).Value = password;
+                       access.Command.Parameters.Add("p9", OracleDbType.Varchar2).Value = "s";
+                       access.Command.ExecuteNonQuery();
                         MessageBox.Show("Salesman Successfully Inserted with Password: " + password);
 
                         this.LoadSalesmanInfo();
@@ -183,7 +178,7 @@ namespace Grocery_Shop_Management_System
                     {
                         MessageBox.Show(ex.ToString());
                     }
-                }
+                
             }
             else
             {
