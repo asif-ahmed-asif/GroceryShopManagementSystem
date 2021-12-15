@@ -43,7 +43,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.cnametxt = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.categoryBtn = new System.Windows.Forms.Button();
             this.ctxt = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.delBtn = new System.Windows.Forms.Button();
@@ -85,7 +84,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 395);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 365);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // panel1
@@ -172,7 +171,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 53);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(622, 338);
+            this.panel3.Size = new System.Drawing.Size(622, 308);
             this.panel3.TabIndex = 2;
             // 
             // productTable
@@ -192,7 +191,7 @@
             this.productTable.Name = "productTable";
             this.productTable.ReadOnly = true;
             this.productTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productTable.Size = new System.Drawing.Size(622, 338);
+            this.productTable.Size = new System.Drawing.Size(622, 308);
             this.productTable.TabIndex = 0;
             this.productTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productTable_CellClick);
             // 
@@ -228,7 +227,6 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.cnametxt);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.categoryBtn);
             this.panel4.Controls.Add(this.ctxt);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.delBtn);
@@ -249,7 +247,7 @@
             this.panel4.Location = new System.Drawing.Point(631, 53);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(367, 338);
+            this.panel4.Size = new System.Drawing.Size(367, 308);
             this.panel4.TabIndex = 3;
             // 
             // cnametxt
@@ -275,21 +273,6 @@
             this.label4.Size = new System.Drawing.Size(116, 17);
             this.label4.TabIndex = 111;
             this.label4.Text = "Category Name:";
-            // 
-            // categoryBtn
-            // 
-            this.categoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.categoryBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryBtn.Location = new System.Drawing.Point(134, 246);
-            this.categoryBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.categoryBtn.Name = "categoryBtn";
-            this.categoryBtn.Size = new System.Drawing.Size(107, 35);
-            this.categoryBtn.TabIndex = 110;
-            this.categoryBtn.TabStop = false;
-            this.categoryBtn.Text = "Category";
-            this.categoryBtn.UseVisualStyleBackColor = false;
-            this.categoryBtn.Click += new System.EventHandler(this.categoryBtn_Click);
             // 
             // ctxt
             // 
@@ -320,7 +303,7 @@
             // 
             this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.delBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delBtn.Location = new System.Drawing.Point(92, 297);
+            this.delBtn.Location = new System.Drawing.Point(92, 268);
             this.delBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(90, 35);
@@ -359,7 +342,7 @@
             // 
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(157)))), ((int)(((byte)(68)))));
             this.saveBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(2, 297);
+            this.saveBtn.Location = new System.Drawing.Point(2, 268);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(88, 35);
@@ -373,7 +356,7 @@
             // 
             this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.logoutBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(276, 297);
+            this.logoutBtn.Location = new System.Drawing.Point(276, 268);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(90, 35);
@@ -387,7 +370,7 @@
             // 
             this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
             this.backBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(185, 297);
+            this.backBtn.Location = new System.Drawing.Point(185, 268);
             this.backBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(88, 35);
@@ -503,7 +486,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1001, 395);
+            this.ClientSize = new System.Drawing.Size(1001, 365);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -558,6 +541,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvjdate;
         private System.Windows.Forms.ComboBox cnametxt;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.Button categoryBtn;
     }
 }

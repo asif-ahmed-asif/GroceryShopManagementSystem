@@ -220,6 +220,7 @@
             this.backBtn.TabStop = false;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // Customer_Reg
             // 

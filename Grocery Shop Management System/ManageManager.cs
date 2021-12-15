@@ -34,6 +34,7 @@ namespace Grocery_Shop_Management_System
         }
         private void LoadManagerInfo()
         {
+            this.datetxt.MaxDate = DateTime.Now;
             DataAccess access = new DataAccess();
 
             string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm'";

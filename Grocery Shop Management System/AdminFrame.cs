@@ -42,7 +42,9 @@ namespace Grocery_Shop_Management_System
 
         private void salesBtn_Click(object sender, EventArgs e)
         {
-
+            SalesFrame sf = new SalesFrame();
+            sf.Show(this);
+            this.Hide();
         }
 
         private void AdminFrame_Load(object sender, EventArgs e)
@@ -124,6 +126,13 @@ namespace Grocery_Shop_Management_System
         {
             AdminProfile ap = new AdminProfile();
             ap.Visible = true;
+            this.Hide();
+        }
+
+        private void categoryBtn_Click(object sender, EventArgs e)
+        {
+            ManageCategory mc = new ManageCategory();
+            mc.Visible = true;
             this.Hide();
         }
     }

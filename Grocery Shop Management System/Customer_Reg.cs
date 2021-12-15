@@ -73,5 +73,12 @@ namespace Grocery_Shop_Management_System
         {
             Application.Exit();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            SalesmanFrame sf = new SalesmanFrame();
+            sf.Visible = true;
+            this.Hide();
+        }
     }
 }
