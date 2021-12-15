@@ -149,24 +149,24 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(49, 94);
+            this.label3.Location = new System.Drawing.Point(43, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.Size = new System.Drawing.Size(121, 17);
             this.label3.TabIndex = 132;
-            this.label3.Text = "Manager Name:";
+            this.label3.Text = "Customer Name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(72, 63);
+            this.label5.Location = new System.Drawing.Point(66, 63);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 17);
+            this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 131;
-            this.label5.Text = "Manager ID:";
+            this.label5.Text = "Customer ID:";
             // 
             // phonetxt
             // 

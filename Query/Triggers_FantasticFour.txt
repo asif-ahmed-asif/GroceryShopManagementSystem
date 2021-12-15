@@ -1,0 +1,84 @@
+1. Mustafizur Rahman
+18-36179-1
+2. SIDDIKUR RAHMAN SHOHAN
+18-36667-1
+3. RAHAT MAKSUD PRANTO
+18-37675-1
+4. ASIF AHMED
+18-38441-2
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. create or replace trigger check_qty
+before update on product
+For each row
+
+declare
+
+begin
+
+if (:new.quantity<0) then
+raise_application_error(-98011,'Not enough Quantity!');        
+else
+dbms_output.put_line('Proceeding to update Product table');
+end if;
+
+
+end;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. create or replace trigger discount_on_sales
+before update on sales
+For each row
+
+declare
+dp number(10);
+
+begin
+dp := :old.t_price - :new.t_price;
+
+if (:new.quantity<12 AND ((dp/:old.t_price)*100) > 20) then
+raise_application_error(-31011,'Discount Amount is Too much!');        
+else
+dbms_output.put_line('Proceeding to update sales');
+end if;
+
+end;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. create or replace trigger discount_on_invoice
+before update on invoice
+For each row
+
+declare
+
+begin
+dp := :old.sub_total - :new.sub_total;
+
+if (((dp/:old.sub_total)*100) > 25) then
+raise_application_error(-31012,'Discount Amount is Too much!');        
+else
+dbms_output.put_line('Proceeding to update Invoice');
+end if;
+
+end;
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. create or replace trigger salary_change_monitoring
+before update on employee
+For each row
+
+declare
+exp number(10);
+dsal number(10);
+
+begin
+exp := round((sysdate - :new.join_date)/365);
+dsal := :new.salary - :old.salary;
+
+if (exp<5 AND ((dsal/:old.salary)*100) > 20) then
+raise_application_error(-32011,'Not Appropriate Salary!');        
+else
+dbms_output.put_line('Proceeding to update Employee table');
+end if;
+
+
+end;

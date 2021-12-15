@@ -95,11 +95,11 @@
             // 
             this.user.AutoSize = true;
             this.user.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold);
-            this.user.Location = new System.Drawing.Point(31, 266);
+            this.user.Location = new System.Drawing.Point(47, 266);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(120, 30);
+            this.user.Size = new System.Drawing.Size(104, 30);
             this.user.TabIndex = 17;
-            this.user.Text = "Username:";
+            this.user.Text = "User ID:";
             // 
             // Login
             // 

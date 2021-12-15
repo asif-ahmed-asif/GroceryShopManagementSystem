@@ -1,0 +1,19 @@
+1.Find out the details of 's' type whose salary is less than 'King' and Address same Rony.
+
+===> select name,phone,type,join_date,salary from employee,login where employee.user_id=login.user_id and salary < (select salary from employee where name like '%King%') and login.type = 's' and address=(select address from employee where  name='Rony') and name <> 'Rony'
+
+2. Find out the details of  mgrs Who manage the maximum no of employee.
+
+===>SELECT Employee.* FROM Employee where name=(SELECT M.name FROM employee E,employee M where E.mgr=M.user_id GROUP BY M.name HAVING COUNT(*)=(SELECT MAX(COUNT(*)) FROM employee E,employee M where E.mgr=M.user_id GROUP BY M.name))
+
+3. Find out the most invested product's Category
+
+===>select category.name from product,category where product.cid=category.cid and p_price*quantity = (select max(p_price*quantity) from product) 
+
+4. Find out the details of  'Dairy' category whose product quantity is greater than  'Milk Vita Milk 1kg' and s_price is less then like 'Mizan Soya Bean Oil 2ltr'.
+
+===>select * from product,category where product.cid=category.cid and quantity > (select quantity from product where name 'Milk Vita Milk 1kg') and s_price = (select s_price from product where name='Mizan Soya Bean Oil 2ltr') and category.name = 'Dairy'
+
+5. Find out the mgr names and the number of employees they manage
+
+===>select m.name,count(m.name) from employee e, employee m where e.mgr = m.user_id group by m.name
