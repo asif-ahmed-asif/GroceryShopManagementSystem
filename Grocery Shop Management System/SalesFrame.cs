@@ -18,11 +18,6 @@ namespace Grocery_Shop_Management_System
             InitializeComponent();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            this.Refresh();
-        }
-
         private void SalesFrame_Load(object sender, EventArgs e)
         {
             this.Refresh();
@@ -96,9 +91,7 @@ namespace Grocery_Shop_Management_System
             catch(Exception e)
             {
                 MessageBox.Show(e.Message);
-            }
-            
-            
+            } 
         }
 
         private void LoadMostBenefit()
@@ -127,9 +120,19 @@ namespace Grocery_Shop_Management_System
             {
                 MessageBox.Show(e.Message);
             }
-
-
         }
 
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Hide();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Login lf = new Login();
+            lf.Visible = true;
+            this.Hide();
+        }
     }
 }

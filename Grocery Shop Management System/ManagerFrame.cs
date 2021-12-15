@@ -31,12 +31,14 @@ namespace Grocery_Shop_Management_System
             ManageProduct mp = new ManageProduct();
             mp.Show(this);
             this.Hide();
-            mp.categoryBtn.Visible = false;
+            //mp.categoryBtn.Visible = false;
         }
 
         private void salesBtn_Click(object sender, EventArgs e)
         {
-
+            SalesFrame sf = new SalesFrame();
+            sf.Show(this);
+            this.Hide();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)

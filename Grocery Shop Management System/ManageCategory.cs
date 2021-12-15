@@ -190,8 +190,8 @@ namespace Grocery_Shop_Management_System
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            ManageProduct mp = new ManageProduct();
-            mp.Visible = true;
+            AdminFrame af = new AdminFrame();
+            af.Visible = true;
             this.Hide();
         }
 

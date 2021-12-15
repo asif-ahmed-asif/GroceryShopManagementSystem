@@ -18,13 +18,6 @@ namespace Grocery_Shop_Management_System
         {
             InitializeComponent();
         }
-
-        private void categoryBtn_Click(object sender, EventArgs e)
-        {
-            ManageCategory mc = new ManageCategory();
-            mc.Visible = true;
-            this.Hide();
-        }
         private void Refresh()
         {
             isNew = true;
@@ -236,11 +229,11 @@ namespace Grocery_Shop_Management_System
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            //this.Owner.Show();
-            //this.Hide();
-            AdminFrame af = new AdminFrame();
-            af.Visible = true;
+            this.Owner.Show();
             this.Hide();
+            //AdminFrame af = new AdminFrame();
+            //af.Visible = true;
+            //this.Hide();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)

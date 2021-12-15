@@ -28,77 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chartMostSoldProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartMostBenefitProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
             this.lblMonth = new System.Windows.Forms.Label();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartMostSoldProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMostBenefitProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // chartMostSoldProduct
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartMostSoldProduct.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartMostSoldProduct.Legends.Add(legend1);
+            chartArea11.Name = "ChartArea1";
+            this.chartMostSoldProduct.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chartMostSoldProduct.Legends.Add(legend11);
             this.chartMostSoldProduct.Location = new System.Drawing.Point(12, 105);
             this.chartMostSoldProduct.Name = "chartMostSoldProduct";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Sales";
-            this.chartMostSoldProduct.Series.Add(series1);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Sales";
+            this.chartMostSoldProduct.Series.Add(series11);
             this.chartMostSoldProduct.Size = new System.Drawing.Size(641, 404);
             this.chartMostSoldProduct.TabIndex = 0;
             this.chartMostSoldProduct.Text = "chartMostSoldProduct";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.ShadowColor = System.Drawing.Color.Black;
-            title1.Text = "Top sold Products";
-            this.chartMostSoldProduct.Titles.Add(title1);
+            title11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title11.Name = "Title1";
+            title11.ShadowColor = System.Drawing.Color.Black;
+            title11.Text = "Top sold Products";
+            this.chartMostSoldProduct.Titles.Add(title11);
             // 
             // chartMostBenefitProduct
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartMostBenefitProduct.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartMostBenefitProduct.Legends.Add(legend2);
+            chartArea12.Name = "ChartArea1";
+            this.chartMostBenefitProduct.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chartMostBenefitProduct.Legends.Add(legend12);
             this.chartMostBenefitProduct.Location = new System.Drawing.Point(673, 105);
             this.chartMostBenefitProduct.Name = "chartMostBenefitProduct";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Benefit";
-            this.chartMostBenefitProduct.Series.Add(series2);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Benefit";
+            this.chartMostBenefitProduct.Series.Add(series12);
             this.chartMostBenefitProduct.Size = new System.Drawing.Size(659, 404);
             this.chartMostBenefitProduct.TabIndex = 1;
             this.chartMostBenefitProduct.Text = "chartMostBenefitProduct";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.ShadowColor = System.Drawing.Color.Black;
-            title2.Text = "Top Benifited Products";
-            this.chartMostBenefitProduct.Titles.Add(title2);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(550, 536);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(227, 66);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            title12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title12.Name = "Title1";
+            title12.ShadowColor = System.Drawing.Color.Black;
+            title12.Text = "Top Benifited Products";
+            this.chartMostBenefitProduct.Titles.Add(title12);
             // 
             // label1
             // 
@@ -106,7 +96,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(402, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 28);
+            this.label1.Size = new System.Drawing.Size(147, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Today\'s Benefit : ";
             // 
@@ -116,7 +106,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(962, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 28);
+            this.label2.Size = new System.Drawing.Size(188, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last 30 Days Benefit : ";
             // 
@@ -126,7 +116,7 @@
             this.lblToday.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblToday.Location = new System.Drawing.Point(583, 37);
             this.lblToday.Name = "lblToday";
-            this.lblToday.Size = new System.Drawing.Size(59, 28);
+            this.lblToday.Size = new System.Drawing.Size(48, 22);
             this.lblToday.TabIndex = 5;
             this.lblToday.Text = "0 TK";
             // 
@@ -136,21 +126,50 @@
             this.lblMonth.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblMonth.Location = new System.Drawing.Point(1192, 37);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(59, 28);
+            this.lblMonth.Size = new System.Drawing.Size(48, 22);
             this.lblMonth.TabIndex = 6;
             this.lblMonth.Text = "0 TK";
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.logoutBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold);
+            this.logoutBtn.Location = new System.Drawing.Point(1237, 519);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(95, 36);
+            this.logoutBtn.TabIndex = 92;
+            this.logoutBtn.TabStop = false;
+            this.logoutBtn.Text = "Log Out";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
+            this.backBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(1145, 520);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(88, 35);
+            this.backBtn.TabIndex = 93;
+            this.backBtn.TabStop = false;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // SalesFrame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1352, 614);
+            this.ClientSize = new System.Drawing.Size(1352, 561);
+            this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.lblToday);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.chartMostBenefitProduct);
             this.Controls.Add(this.chartMostSoldProduct);
             this.Font = new System.Drawing.Font("Cambria", 14.25F);
@@ -173,10 +192,11 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMostSoldProduct;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMostBenefitProduct;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblToday;
         private System.Windows.Forms.Label lblMonth;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button backBtn;
     }
 }
