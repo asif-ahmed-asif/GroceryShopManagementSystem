@@ -1,0 +1,161 @@
+--> select * from user_sequences;                                                        |
+--> drop sequence Manager_seq                                                            |
+--> select * from all_constraints where upper(constraint_name) = 'PK_Salesman';          |
+select * from invoice
+select * from member
+select * from sales
+select * from print_invoice
+
+select Invoice_Seq.CURRVAL from invoice
+-----------------------------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------|
+Admin
+
+-->CREATE TABLE Admin(
+ID NUMBER(10) CONSTRAINT A_PK_Admin PRIMARY KEY,
+USER_ID NUMBER(10) CONSTRAINT A_FK_USER_ID REFERENCES LOGIN,
+NAME VARCHAR2(50),
+PHONE VARCHAR2(50),
+ADDRESS VARCHAR2(50),
+EMAIL VARCHAR2(50)
+);
+
+-->CREATE SEQUENCE Admin_Seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+-->INSERT INTO Admin VALUES (Admin_Seq.NEXTVAL,1000,'Mustafizur Rahman','mustafizur171@gmail.com','01686026037','Dhaka');
+-----------------------------------------------------------------------------------------
+Login
+
+-->CREATE TABLE Login(
+User_Id NUMBER(10) CONSTRAINT PK_Login PRIMARY KEY,
+Password VARCHAR2(50),
+Type VARCHAR2(50));
+
+-->CREATE SEQUENCE Login_Seq
+START WITH 1000
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+-->INSERT INTO LOGIN VALUES (Login_Seq.NEXTVAL,'admin','a');
+----------------------------------------------------------------------------
+EMPLOYEE-
+
+-->CREATE TABLE EMPLOYEE(
+ID NUMBER(10) CONSTRAINT PK_EMPLOYEE PRIMARY KEY,
+USER_ID NUMBER(10) CONSTRAINT FK_USER_ID REFERENCES LOGIN,
+NAME VARCHAR2(50),
+PHONE VARCHAR2(50),
+ADDRESS VARCHAR2(50),
+SALARY NUMBER(10),
+JOIN_DATE VARCHAR2(50),
+EMAIL VARCHAR2(50),
+MGR NUMBER(10) NULL
+);
+
+-->CREATE SEQUENCE Employee_Seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+-->INSERT INTO LOGIN VALUES (Login_Seq.NEXTVAL,'manager','m');
+-->INSERT INTO Employee VALUES (Employee_Seq.NEXTVAL,Login_Seq.CURRVAL,'MR. Y','01722222222','NARAYANGANJ',10000,'10/29/2021','MRY@GMAIL.COM',NULL);
+
+-->INSERT INTO LOGIN VALUES (Login_Seq.NEXTVAL,'salesman','s');
+-->INSERT INTO Employee VALUES (Employee_Seq.NEXTVAL,Login_Seq.CURRVAL,'MR. Y','01711111112','Dhaka',10000,'10/29/2021','MRY@GMAIL.COM',1001);
+----------------------------------------------------------------------------
+Category
+
+-->CREATE TABLE Category(
+CID NUMBER(10) CONSTRAINT C_PK_Category PRIMARY KEY,
+NAME VARCHAR2(50)
+);
+
+-->CREATE SEQUENCE Category_Seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+-->INSERT INTO Category VALUES (Category_Seq.NEXTVAL,'Milk');
+----------------------------------------------------------------------------------------------------
+Product
+
+-->CREATE TABLE Product(
+PID NUMBER(10) CONSTRAINT P_PK_Product PRIMARY KEY,
+NAME VARCHAR2(50),
+P_PRICE NUMBER(10),
+S_PRICE NUMBER(10),
+QUANTITY NUMBER(10),
+CID NUMBER(10) CONSTRAINT CT_FK_CID REFERENCES Category
+);
+
+-->CREATE SEQUENCE Product_Seq
+START WITH 100
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+-->INSERT INTO Product VALUES (Product_Seq.NEXTVAL,'Amul Gold Milk',200,250,50,Category_Seq.CURRVAL);
+----------------------------------------------------------------------------------------------------------
+Invoice
+
+-->CREATE TABLE Invoice(
+ID NUMBER(10) CONSTRAINT I_PK_Invoice PRIMARY KEY,
+S_DATE VARCHAR2(50),
+SUB_TOTAL NUMBER(10)
+);
+
+-->CREATE SEQUENCE Invoice_Seq
+START WITH 1111
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+----------------------------------------------------------------------------------------------------------
+Member
+
+-->CREATE TABLE Member(
+ID NUMBER(10) CONSTRAINT M_PK_Member PRIMARY KEY,
+NAME VARCHAR2(50),
+PHONE VARCHAR2(50),
+ADDRESS VARCHAR2(50),
+AMOUNT NUMBER(10) NULL
+);
+
+-->CREATE SEQUENCE Member_Seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+----------------------------------------------------------------------------------------------------------
+Sales
+
+-->CREATE TABLE Sales(
+S_ID NUMBER(10) CONSTRAINT S_PK_Sales PRIMARY KEY,
+INVOICE_ID NUMBER(10) CONSTRAINT S_FK_USER_ID REFERENCES Invoice,
+MEMBER_ID NUMBER(10) CONSTRAINT M_FK_ID REFERENCES Member,
+USER_ID NUMBER(10) CONSTRAINT S_FK_ID REFERENCES Login,
+PID NUMBER(10),
+S_Date VARCHAR2(50),
+QUANTITY NUMBER(10),
+T_Price NUMBER(10)
+);
+
+-->CREATE SEQUENCE Sales_Seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+---------------------------------------------------------------------------------------------------------
+VIEW
+
+CREATE VIEW Print_Invoice AS SELECT
+i.id, i.s_date, i.sub_total, s.pid, s.quantity, s.t_price, s.member_id, m.name, m.phone, m.address
+FROM Member m, Sales s, Invoice i
+WHERE m.ID = s.MEMBER_ID
+AND s.INVOICE_ID = i.ID;

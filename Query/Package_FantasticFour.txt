@@ -1,0 +1,132 @@
+1. Mustafizur Rahman
+18-36179-1
+2. SIDDIKUR RAHMAN SHOHAN
+18-36667-1
+3. RAHAT MAKSUD PRANTO
+18-37675-1
+4. ASIF AHMED
+18-38441-2
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+create or replace package product_member_insert as
+procedure AddCategory(name category.name%type);
+procedure AddProduct(pnum product.name%type, pprice product.p_price%type, sprice product.s_price%type, quan product.quantity%type, 
+cname category.name%type);
+procedure AddMember(name member.name%type, phone member.phone%type,
+address member.address%type, amount member.amount%type);
+end;
+
+
+
+create or replace package body product_member_insert as
+
+function GetCategory(cnum category.name%type) 
+return number is 
+a category.cid%type; 
+begin 
+select cid into a from category where name = cnum; 
+return a; 
+
+end GetCategory; 
+
+
+
+procedure AddCategory(name category.name%type)
+is
+
+begin 
+insert into category values (category_Seq.nextval,name); 
+
+end AddCategory;
+
+procedure AddProduct(pnum product.name%type, pprice product.p_price%type, sprice product.s_price%type, quan product.quantity%type, cname category.name%type)
+ is 
+cid number(10); 
+begin 
+cid :=GetCategory(cname); 
+insert into product values (product_Seq.nextval,pnum,pprice,sprice,quan,cid); 
+dbms_output.put_line('Done!'); 
+
+Exception
+when no_data_found then
+dbms_output.put_line('Category Does Not Exist!'); 
+
+end AddProduct;
+
+
+
+procedure AddMember(name member.name%type, phone member.phone%type,
+address member.address%type, amount member.amount%type)
+ is 
+
+begin 
+insert into member values (member_Seq.nextval,name,phone,address,amount); 
+
+end AddMember;
+
+end product_member_insert;
+
+
+
+
+#################################
+begin
+product_member_insert.AddMember('m1','02933366','Dhaka',0);
+end;
+##################################
+
+create or replace package body emp_sales_insert as
+
+
+function GetMId(mphone member.phone%type)
+return number
+is
+a member.id%type;
+begin
+select id into a from member where phone = mphone;
+return a;
+end GetMId;
+
+function GetIid
+return number
+is
+a member.id%type;
+begin
+select Invoice_Seq.CURRVAL into a from Invoice;
+return a;
+end GetIid;
+
+procedure AddEmployee(name employee.name%type, phone employee.phone%type,
+address employee.address%type, sal employee.salary%type,jdate employee.join_date%type,
+mail employee.email%type, mgr employee.mgr%type, pass login.password%type, type login.type%type)
+is
+uid number(10);
+begin
+insert into login values (login_Seq.nextval,pass,type);
+insert into employee values (employee_Seq.nextval,login_Seq.CURRVAL,name,phone,address,sal,jdate,mail,mgr);
+dbms_output.put_line('Done!');
+end AddEmployee;
+
+procedure AddSales(eid employee.user_id%type, mphone member.phone%type,
+dt sales.s_date%type, qty product.quantity%type, t_price sales.t_price%type, pid product.pid%type )
+is
+mid number(10);
+iid number(10);
+begin
+mid :=GetMId(mphone);
+iid :=GetIid;
+insert into sales values (sales_Seq.nextval,iid,mid,eid,pid,dt,qty,t_price);
+dbms_output.put_line('Done!');
+
+Exception
+when no_data_found then
+dbms_output.put_line('Member Does Not Exist!');
+end AddSales;
+
+end emp_sales_insert;
+----------------------------------------------------------
+create or replace procedure UpdateAdmin(nme admin.name%type, phon admin.phone%type, mail admin.email%type, adrss admin.address%type, i admin.user_id%type)
+is
+begin
+update admin set name = nme,phone= phon, email = mail, address = adrss where user_id=i;
+dbms_output.put_line('Done!');
+end;

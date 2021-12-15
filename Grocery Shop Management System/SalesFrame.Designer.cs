@@ -145,6 +145,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+
+            this.ClientSize = new System.Drawing.Size(1370, 641);
+            this.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(1542, 641);
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.lblToday);
@@ -167,6 +171,8 @@
         }
 
         #endregion
+
+
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMostSoldProduct;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMostBenefitProduct;

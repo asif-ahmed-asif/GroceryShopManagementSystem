@@ -203,6 +203,13 @@ namespace Grocery_Shop_Management_System
             string cname = this.cnametxt.Text;
             string address = this.addresstxt.Text;
             string phone = this.phonetxt.Text;
+            string total = this.nettxt.Text;
+
+            if (string.IsNullOrEmpty(total))
+            {
+                MessageBox.Show("Count total amount to complete order");
+                return;
+            }
 
             if (string.IsNullOrEmpty(cname) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(phone))
             {
