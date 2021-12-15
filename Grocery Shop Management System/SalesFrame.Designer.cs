@@ -53,13 +53,13 @@
             this.chartMostSoldProduct.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartMostSoldProduct.Legends.Add(legend1);
-            this.chartMostSoldProduct.Location = new System.Drawing.Point(40, 105);
+            this.chartMostSoldProduct.Location = new System.Drawing.Point(12, 105);
             this.chartMostSoldProduct.Name = "chartMostSoldProduct";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Sales";
             this.chartMostSoldProduct.Series.Add(series1);
-            this.chartMostSoldProduct.Size = new System.Drawing.Size(713, 404);
+            this.chartMostSoldProduct.Size = new System.Drawing.Size(641, 404);
             this.chartMostSoldProduct.TabIndex = 0;
             this.chartMostSoldProduct.Text = "chartMostSoldProduct";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,13 +74,13 @@
             this.chartMostBenefitProduct.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartMostBenefitProduct.Legends.Add(legend2);
-            this.chartMostBenefitProduct.Location = new System.Drawing.Point(777, 105);
+            this.chartMostBenefitProduct.Location = new System.Drawing.Point(673, 105);
             this.chartMostBenefitProduct.Name = "chartMostBenefitProduct";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Benefit";
             this.chartMostBenefitProduct.Series.Add(series2);
-            this.chartMostBenefitProduct.Size = new System.Drawing.Size(735, 404);
+            this.chartMostBenefitProduct.Size = new System.Drawing.Size(659, 404);
             this.chartMostBenefitProduct.TabIndex = 1;
             this.chartMostBenefitProduct.Text = "chartMostBenefitProduct";
             title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,7 +92,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(655, 559);
+            this.btnRefresh.Location = new System.Drawing.Point(550, 536);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(227, 66);
             this.btnRefresh.TabIndex = 2;
@@ -145,11 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-
-            this.ClientSize = new System.Drawing.Size(1370, 641);
-            this.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(1542, 641);
+            this.ClientSize = new System.Drawing.Size(1352, 614);
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.lblToday);
             this.Controls.Add(this.label2);
@@ -158,6 +154,7 @@
             this.Controls.Add(this.chartMostBenefitProduct);
             this.Controls.Add(this.chartMostSoldProduct);
             this.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SalesFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
