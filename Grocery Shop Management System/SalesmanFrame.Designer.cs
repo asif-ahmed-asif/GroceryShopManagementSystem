@@ -30,6 +30,8 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.csearchtxt = new System.Windows.Forms.TextBox();
+            this.csearchBtn = new System.Windows.Forms.Button();
             this.searchtxt = new System.Windows.Forms.TextBox();
             this.searchBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
@@ -51,7 +53,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.remBtn = new System.Windows.Forms.Button();
-            this.cartBtn = new System.Windows.Forms.Button();
             this.sellTable = new System.Windows.Forms.DataGridView();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +66,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.phonetxt = new System.Windows.Forms.TextBox();
             this.addresstxt = new System.Windows.Forms.TextBox();
+            this.cartBtn = new System.Windows.Forms.Button();
             this.cnametxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -117,6 +119,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.csearchtxt);
+            this.panel1.Controls.Add(this.csearchBtn);
             this.panel1.Controls.Add(this.searchtxt);
             this.panel1.Controls.Add(this.searchBtn);
             this.panel1.Controls.Add(this.refreshBtn);
@@ -127,40 +131,66 @@
             this.panel1.Size = new System.Drawing.Size(603, 41);
             this.panel1.TabIndex = 0;
             // 
+            // csearchtxt
+            // 
+            this.csearchtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.csearchtxt.Font = new System.Drawing.Font("Cambria", 12F);
+            this.csearchtxt.ForeColor = System.Drawing.Color.White;
+            this.csearchtxt.Location = new System.Drawing.Point(353, 6);
+            this.csearchtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.csearchtxt.Name = "csearchtxt";
+            this.csearchtxt.Size = new System.Drawing.Size(153, 26);
+            this.csearchtxt.TabIndex = 13;
+            this.csearchtxt.TabStop = false;
+            // 
+            // csearchBtn
+            // 
+            this.csearchBtn.BackColor = System.Drawing.Color.Yellow;
+            this.csearchBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.csearchBtn.Location = new System.Drawing.Point(511, 2);
+            this.csearchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.csearchBtn.Name = "csearchBtn";
+            this.csearchBtn.Size = new System.Drawing.Size(88, 35);
+            this.csearchBtn.TabIndex = 12;
+            this.csearchBtn.TabStop = false;
+            this.csearchBtn.Text = "C. Search";
+            this.csearchBtn.UseVisualStyleBackColor = false;
+            this.csearchBtn.Click += new System.EventHandler(this.csearchBtn_Click);
+            // 
             // searchtxt
             // 
             this.searchtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.searchtxt.Font = new System.Drawing.Font("Cambria", 12F);
             this.searchtxt.ForeColor = System.Drawing.Color.White;
-            this.searchtxt.Location = new System.Drawing.Point(208, 6);
+            this.searchtxt.Location = new System.Drawing.Point(103, 6);
             this.searchtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchtxt.Name = "searchtxt";
-            this.searchtxt.Size = new System.Drawing.Size(190, 26);
+            this.searchtxt.Size = new System.Drawing.Size(153, 26);
             this.searchtxt.TabIndex = 11;
             this.searchtxt.TabStop = false;
             // 
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.Color.Yellow;
-            this.searchBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold);
-            this.searchBtn.Location = new System.Drawing.Point(404, 2);
+            this.searchBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Location = new System.Drawing.Point(261, 2);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(88, 35);
             this.searchBtn.TabIndex = 10;
             this.searchBtn.TabStop = false;
-            this.searchBtn.Text = "Search";
+            this.searchBtn.Text = " P. Search";
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
-            this.refreshBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold);
-            this.refreshBtn.Location = new System.Drawing.Point(103, 2);
+            this.refreshBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.Location = new System.Drawing.Point(2, 2);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(99, 35);
+            this.refreshBtn.Size = new System.Drawing.Size(97, 35);
             this.refreshBtn.TabIndex = 9;
             this.refreshBtn.TabStop = false;
             this.refreshBtn.Text = "Refresh";
@@ -255,7 +285,7 @@
             // resetBtn
             // 
             this.resetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
-            this.resetBtn.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
+            this.resetBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.Location = new System.Drawing.Point(269, 398);
             this.resetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resetBtn.Name = "resetBtn";
@@ -270,13 +300,13 @@
             // 
             this.nettxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.nettxt.CausesValidation = false;
-            this.nettxt.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
+            this.nettxt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nettxt.ForeColor = System.Drawing.Color.White;
             this.nettxt.Location = new System.Drawing.Point(420, 403);
             this.nettxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nettxt.Name = "nettxt";
             this.nettxt.ReadOnly = true;
-            this.nettxt.Size = new System.Drawing.Size(120, 23);
+            this.nettxt.Size = new System.Drawing.Size(120, 26);
             this.nettxt.TabIndex = 161;
             this.nettxt.TabStop = false;
             this.nettxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -284,7 +314,7 @@
             // subBtn
             // 
             this.subBtn.BackColor = System.Drawing.Color.Yellow;
-            this.subBtn.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
+            this.subBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subBtn.Location = new System.Drawing.Point(344, 398);
             this.subBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subBtn.Name = "subBtn";
@@ -367,30 +397,16 @@
             // remBtn
             // 
             this.remBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.remBtn.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
+            this.remBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remBtn.Location = new System.Drawing.Point(126, 398);
             this.remBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.remBtn.Name = "remBtn";
-            this.remBtn.Size = new System.Drawing.Size(100, 32);
+            this.remBtn.Size = new System.Drawing.Size(114, 32);
             this.remBtn.TabIndex = 156;
             this.remBtn.TabStop = false;
             this.remBtn.Text = "Remove Item";
             this.remBtn.UseVisualStyleBackColor = false;
             this.remBtn.Click += new System.EventHandler(this.remBtn_Click);
-            // 
-            // cartBtn
-            // 
-            this.cartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(157)))), ((int)(((byte)(68)))));
-            this.cartBtn.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cartBtn.Location = new System.Drawing.Point(145, 201);
-            this.cartBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cartBtn.Name = "cartBtn";
-            this.cartBtn.Size = new System.Drawing.Size(105, 31);
-            this.cartBtn.TabIndex = 155;
-            this.cartBtn.TabStop = false;
-            this.cartBtn.Text = "Add To Cart";
-            this.cartBtn.UseVisualStyleBackColor = false;
-            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
             // 
             // sellTable
             // 
@@ -566,6 +582,20 @@
             this.addresstxt.Size = new System.Drawing.Size(209, 25);
             this.addresstxt.TabIndex = 155;
             this.addresstxt.TabStop = false;
+            // 
+            // cartBtn
+            // 
+            this.cartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(157)))), ((int)(((byte)(68)))));
+            this.cartBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cartBtn.Location = new System.Drawing.Point(145, 201);
+            this.cartBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cartBtn.Name = "cartBtn";
+            this.cartBtn.Size = new System.Drawing.Size(105, 31);
+            this.cartBtn.TabIndex = 155;
+            this.cartBtn.TabStop = false;
+            this.cartBtn.Text = "Add To Cart";
+            this.cartBtn.UseVisualStyleBackColor = false;
+            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
             // 
             // cnametxt
             // 
@@ -887,6 +917,8 @@
         private System.Windows.Forms.Button invoiceBtn;
         private System.Windows.Forms.Label logintxt;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox csearchtxt;
+        private System.Windows.Forms.Button csearchBtn;
 
     }
 }

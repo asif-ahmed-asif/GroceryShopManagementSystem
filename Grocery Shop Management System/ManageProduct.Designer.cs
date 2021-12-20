@@ -283,7 +283,6 @@
             this.ctxt.Location = new System.Drawing.Point(140, 167);
             this.ctxt.Name = "ctxt";
             this.ctxt.Size = new System.Drawing.Size(213, 25);
-            this.ctxt.Sorted = true;
             this.ctxt.TabIndex = 109;
             this.ctxt.Text = "Select Category";
             // 

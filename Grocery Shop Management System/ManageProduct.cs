@@ -57,11 +57,13 @@ namespace Grocery_Shop_Management_System
         {
             DataAccess access = new DataAccess();
 
-            string query = "Select * from Product";
+            string query = "Select * from Product order by pid ASC";
+            //string query = "Select * from Product";
 
             if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
-                query = query + " Where name like '%" + searchtxt.Text + "%'";
+                //query = query + " Where name like '%" + searchtxt.Text + "%'";
+                query = "Select * from Product Where name like '%" + searchtxt.Text + "%'";
             }
 
             access.Command = new OracleCommand(query, access.Connection);
@@ -153,7 +155,7 @@ namespace Grocery_Shop_Management_System
                     access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = pprice;
                     access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = sprice;
                     access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = quantity;
-                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = cname;
+                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = cnametxt.Text;
                     access.Command.ExecuteNonQuery();
 
                     MessageBox.Show("Product Successfully Inserted");

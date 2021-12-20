@@ -113,8 +113,6 @@
             this.searchtxt.Size = new System.Drawing.Size(274, 26);
             this.searchtxt.TabIndex = 11;
             this.searchtxt.TabStop = false;
-            this.searchtxt.Enter += new System.EventHandler(this.searchtxt_Enter);
-            this.searchtxt.Leave += new System.EventHandler(this.searchtxt_Leave);
             // 
             // searchBtn
             // 

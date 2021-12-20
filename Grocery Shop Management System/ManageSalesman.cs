@@ -57,11 +57,12 @@ namespace Grocery_Shop_Management_System
         {
             DataAccess access = new DataAccess();
 
-            string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's'";
+            string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's' order by id ASC";
+            //string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's'";
 
             if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
-                query = query + " And name like '%" + searchtxt.Text + "%'";
+                query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's' And name like '%" + searchtxt.Text + "%'";
             }
 
             access.Command = new OracleCommand(query, access.Connection);
@@ -153,7 +154,6 @@ namespace Grocery_Shop_Management_System
 
             if (isNew == true)
             {
-
                     try
                     {
                        access.Command = new OracleCommand(insertEmpQuery, access.Connection);
@@ -178,7 +178,6 @@ namespace Grocery_Shop_Management_System
                     {
                         MessageBox.Show(ex.ToString());
                     }
-                
             }
             else
             {
@@ -265,7 +264,6 @@ namespace Grocery_Shop_Management_System
             x = Login.a;
             LoadSalesmanInfo();
             LoadMgr();
-            searchtxt.Text = "Search Here";
         }
 
         private void ManageSalesman_FormClosed(object sender, FormClosedEventArgs e)
@@ -280,22 +278,6 @@ namespace Grocery_Shop_Management_System
                 string id = salesmanTable.Rows[e.RowIndex].Cells[0].Value.ToString();
                 idtxt.Text = id;
                 this.LoadSingleSalesman();
-            }
-        }
-
-        private void searchtxt_Enter(object sender, EventArgs e)
-        {
-            if (searchtxt.Text == "Search Here")
-            {
-                searchtxt.Text = "";
-            }
-        }
-
-        private void searchtxt_Leave(object sender, EventArgs e)
-        {
-            if (searchtxt.Text == "")
-            {
-                searchtxt.Text = "Search Here";
             }
         }
     }

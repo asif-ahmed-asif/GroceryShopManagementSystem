@@ -38,10 +38,12 @@ namespace Grocery_Shop_Management_System
             totaltxt.Text = "";
 
             searchtxt.Text = "";
+            csearchtxt.Text = "";
 
             nettxt.Text = "";
 
             sellTable.ClearSelection();
+            memberTable.ClearSelection();
         }
         private void LoadOrder()
         {
@@ -76,9 +78,9 @@ namespace Grocery_Shop_Management_System
 
             string query = "Select * from Member";
 
-            if (string.IsNullOrEmpty(searchtxt.Text) == false)
+            if (string.IsNullOrEmpty(csearchtxt.Text) == false)
             {
-                query = query + " Where name like '%" + searchtxt.Text + "%'";
+                query = query + " Where name like '%" + csearchtxt.Text + "%'";
             }
 
             access.Command = new OracleCommand(query, access.Connection);
@@ -162,7 +164,6 @@ namespace Grocery_Shop_Management_System
         private void searchBtn_Click(object sender, EventArgs e)
         {
             LoadOrder();
-            LoadCustomer();
         }
         private void Check()
         {
@@ -273,14 +274,13 @@ namespace Grocery_Shop_Management_System
                             access.Command.ExecuteNonQuery();
                         }
 
-                        /*string constr = "Data Source=Mustafiz; User ID=Adms; Password=fahim;";
+                        string constr = "Data Source=Mustafiz; User ID=Adms; Password=fahim;";
                         OracleConnection con = new OracleConnection(constr);
                         con.Open();
 
-                        OracleCommand cmd = new OracleCommand("select Invoice_Seq.CURRVAL from Invoice", con);
+                        OracleCommand cmd = new OracleCommand("Select id from Invoice where rownum <= 1 order by id DESC", con);
 
-                        //object count = cmd.ExecuteScalar();
-                        string invoiceId = cmd.ExecuteScalar().ToString();*/
+                        string invoiceId = cmd.ExecuteScalar().ToString();
 
                         foreach (ListViewItem ListItem in orderView.Items)
                         {
@@ -290,12 +290,13 @@ namespace Grocery_Shop_Management_System
                             access.Command.ExecuteNonQuery();
                         }
 
-                        //MessageBox.Show("Invoice Successfully Inserted with InvoiceID: " + invoiceId);
-                        MessageBox.Show("Invoice Successfully Inserted");
+                        MessageBox.Show("Invoice Successfully Inserted with InvoiceID: " + invoiceId);
+                        //MessageBox.Show("Invoice Successfully Inserted");
 
-                        //new Report.PrintInvoice(invoiceId).Show();
-                        //cmd.Dispose();
-                        //con.Dispose();
+                        new Report.PrintInvoice(invoiceId).Show();
+
+                        cmd.Dispose();
+                        con.Dispose();
 
                         this.LoadOrder();
                         this.LoadCustomer();
@@ -515,6 +516,11 @@ namespace Grocery_Shop_Management_System
         private void invoiceBtn_Click(object sender, EventArgs e)
         {
             new Report.PrintInvoice().Show();
+        }
+
+        private void csearchBtn_Click(object sender, EventArgs e)
+        {
+            LoadCustomer();
         }
     }
 }

@@ -42,6 +42,8 @@
             this.dgvsalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvjdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.mgrtxt = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.addresstxt = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.delBtn = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.phonetxt = new System.Windows.Forms.TextBox();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.idtxt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.mgrtxt = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,8 +115,6 @@
             this.searchtxt.Size = new System.Drawing.Size(274, 26);
             this.searchtxt.TabIndex = 11;
             this.searchtxt.TabStop = false;
-            this.searchtxt.Enter += new System.EventHandler(this.searchtxt_Enter);
-            this.searchtxt.Leave += new System.EventHandler(this.searchtxt_Leave);
             // 
             // searchBtn
             // 
@@ -263,6 +261,30 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(367, 368);
             this.panel4.TabIndex = 3;
+            // 
+            // mgrtxt
+            // 
+            this.mgrtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.mgrtxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mgrtxt.ForeColor = System.Drawing.Color.White;
+            this.mgrtxt.FormattingEnabled = true;
+            this.mgrtxt.Location = new System.Drawing.Point(140, 292);
+            this.mgrtxt.Name = "mgrtxt";
+            this.mgrtxt.Size = new System.Drawing.Size(213, 25);
+            this.mgrtxt.TabIndex = 113;
+            this.mgrtxt.Text = "Select MGR";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(88, 296);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 17);
+            this.label8.TabIndex = 112;
+            this.label8.Text = "MGR:";
             // 
             // addresstxt
             // 
@@ -495,30 +517,6 @@
             this.idtxt.Size = new System.Drawing.Size(213, 25);
             this.idtxt.TabIndex = 77;
             this.idtxt.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(88, 296);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 17);
-            this.label8.TabIndex = 112;
-            this.label8.Text = "MGR:";
-            // 
-            // mgrtxt
-            // 
-            this.mgrtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.mgrtxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
-            this.mgrtxt.ForeColor = System.Drawing.Color.White;
-            this.mgrtxt.FormattingEnabled = true;
-            this.mgrtxt.Location = new System.Drawing.Point(140, 292);
-            this.mgrtxt.Name = "mgrtxt";
-            this.mgrtxt.Size = new System.Drawing.Size(213, 25);
-            this.mgrtxt.TabIndex = 113;
-            this.mgrtxt.Text = "Select MGR";
             // 
             // ManageSalesman
             // 

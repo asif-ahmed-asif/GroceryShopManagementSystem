@@ -37,11 +37,13 @@ namespace Grocery_Shop_Management_System
             this.datetxt.MaxDate = DateTime.Now;
             DataAccess access = new DataAccess();
 
-            string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm'";
+            string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm' order by id ASC";
+            //string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm'";
 
             if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
-                query = query + " And name like '%" + searchtxt.Text + "%'";
+                //query = query + " And name like '%" + searchtxt.Text + "%'";
+                query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm' And name like '%" + searchtxt.Text + "%'";
             }
 
             access.Command = new OracleCommand(query, access.Connection);
@@ -158,8 +160,6 @@ namespace Grocery_Shop_Management_System
                 {
                     MessageBox.Show(ex.ToString());
                 }
-
-              
             }
             else
             {
@@ -245,7 +245,7 @@ namespace Grocery_Shop_Management_System
         private void ManageManager_Load(object sender, EventArgs e)
         {
             LoadManagerInfo();
-            searchtxt.Text = "Search Here";
+            //searchtxt.Text = "Search Here";
         }
 
         private void ManageManager_FormClosed(object sender, FormClosedEventArgs e)
@@ -260,22 +260,6 @@ namespace Grocery_Shop_Management_System
                 string id = managerTable.Rows[e.RowIndex].Cells[0].Value.ToString();
                 idtxt.Text = id;
                 this.LoadSingleManager();
-            }
-        }
-
-        private void searchtxt_Enter(object sender, EventArgs e)
-        {
-            if (searchtxt.Text == "Search Here")
-            {
-                searchtxt.Text = "";
-            }
-        }
-
-        private void searchtxt_Leave(object sender, EventArgs e)
-        {
-            if (searchtxt.Text == "")
-            {
-                searchtxt.Text = "Search Here";
             }
         }
     }
