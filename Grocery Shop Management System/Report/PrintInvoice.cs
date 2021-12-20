@@ -14,13 +14,37 @@ namespace Grocery_Shop_Management_System.Report
 {
     public partial class PrintInvoice : Form
     {
+        string invoiceId;
         public PrintInvoice()
         {
+            InitializeComponent();
+        }
+        public PrintInvoice(string id)
+        {
+            invoiceId = id;
             InitializeComponent();
         }
 
         private void PrintInvoice_Load(object sender, EventArgs e)
         {
+            string constr = "Data Source=Mustafiz; User ID=Adms; Password=fahim;";
+            OracleConnection con = new OracleConnection(constr);
+            con.Open();
+
+            OracleCommand cmd = new OracleCommand("Select * from Print_Invoice where id = '" + invoiceId + "'", con);
+
+            OracleDataAdapter sda = new OracleDataAdapter(cmd); 
+
+            DataSet1 ds = new DataSet1();
+            sda.Fill(ds, "DataTable_Invoice"); //Dataset Tablename
+
+            ReportDataSource rds = new ReportDataSource("DataSet_Report", ds.Tables[0]);  //Reportdata Dataset name
+
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            this.reportViewer1.LocalReport.ReportPath = @"C:\Users\Fahim\Desktop\GroceryShopManagementSystem\Grocery Shop Management System\Report\Report1.rdlc";
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
 
