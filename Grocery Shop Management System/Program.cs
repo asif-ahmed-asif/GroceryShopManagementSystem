@@ -20,7 +20,7 @@ namespace Grocery_Shop_Management_System
             Application.Run(new Login());
             //Application.Run(new Login());
             //Application.Run(new SalesFrame());
-            Application.Run(new ManageSalesman());
+            //Application.Run(new ManageSalesman());
         }
     }
 }
