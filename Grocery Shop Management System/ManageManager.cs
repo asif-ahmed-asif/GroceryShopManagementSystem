@@ -163,12 +163,19 @@ namespace Grocery_Shop_Management_System
             }
             else
             {
-                query = "UPDATE Employee SET name = '" + name + "', phone = '" + phone + "', address = '" + address + "', salary = " + salary + ", join_date = '" + date + "', email = '" + email + "' WHERE user_id = '" + idtxt.Text + "'";
-
-                access.Command = new OracleCommand(query, access.Connection);
+                string updateEmpQuery = "begin UpdateEmployee(:p1,:p2,:p3,:p4,:p5,:p6,:p7,:p8); end;";
+                access.Command = new OracleCommand(updateEmpQuery, access.Connection);
 
                 try
                 {
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = name;
+                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = phone;
+                    access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = address;
+                    access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = salary;
+                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = date;
+                    access.Command.Parameters.Add("p6", OracleDbType.Varchar2).Value = email;
+                    access.Command.Parameters.Add("p7", OracleDbType.Varchar2).Value = null;
+                    access.Command.Parameters.Add("p8", OracleDbType.Varchar2).Value = id;
                     if (access.Command.ExecuteNonQuery() == 0)
                     {
                         MessageBox.Show("Manager Update Failed");

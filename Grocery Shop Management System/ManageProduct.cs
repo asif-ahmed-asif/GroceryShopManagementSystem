@@ -172,12 +172,17 @@ namespace Grocery_Shop_Management_System
             }
             else
             {
-                query = "UPDATE Product SET name = '" + name + "', p_price = " + pprice + ", s_price = " + sprice + ", quantity = " + quantity + ", cid = " + cid + " WHERE pid = '" + idtxt.Text + "'";
-
-                access.Command = new OracleCommand(query, access.Connection);
+                string updateProductQuery = "begin UpdateProduct(:p6,:p7,:p8,:p9,:p10, :p11); end;";
+                access.Command = new OracleCommand(updateProductQuery, access.Connection);
 
                 try
                 {
+                    access.Command.Parameters.Add("p6", OracleDbType.Varchar2).Value = name;
+                    access.Command.Parameters.Add("p7", OracleDbType.Varchar2).Value = pprice;
+                    access.Command.Parameters.Add("p8", OracleDbType.Varchar2).Value = sprice;
+                    access.Command.Parameters.Add("p9", OracleDbType.Varchar2).Value = quantity;
+                    access.Command.Parameters.Add("p10", OracleDbType.Varchar2).Value = ctxt.Text;
+                    access.Command.Parameters.Add("p11", OracleDbType.Varchar2).Value = idtxt.Text;
                     if (access.Command.ExecuteNonQuery() == 0)
                     {
                         MessageBox.Show("Product Update Failed");

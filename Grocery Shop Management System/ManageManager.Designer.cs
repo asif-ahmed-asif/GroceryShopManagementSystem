@@ -110,7 +110,7 @@
             this.searchtxt.Location = new System.Drawing.Point(180, 6);
             this.searchtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchtxt.Name = "searchtxt";
-            this.searchtxt.Size = new System.Drawing.Size(274, 26);
+            this.searchtxt.Size = new System.Drawing.Size(274, 31);
             this.searchtxt.TabIndex = 11;
             this.searchtxt.TabStop = false;
             // 
@@ -161,7 +161,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(66, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 27);
+            this.label6.Size = new System.Drawing.Size(293, 35);
             this.label6.TabIndex = 0;
             this.label6.Text = "<< Manager Details >> ";
             // 
@@ -277,7 +277,7 @@
             this.label7.Location = new System.Drawing.Point(64, 201);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.Size = new System.Drawing.Size(86, 22);
             this.label7.TabIndex = 108;
             this.label7.Text = "Address:";
             // 
@@ -303,7 +303,7 @@
             this.label10.Location = new System.Drawing.Point(77, 169);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.Size = new System.Drawing.Size(70, 22);
             this.label10.TabIndex = 97;
             this.label10.Text = "Salary:";
             // 
@@ -316,7 +316,7 @@
             this.salarytxt.Location = new System.Drawing.Point(140, 165);
             this.salarytxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.salarytxt.Name = "salarytxt";
-            this.salarytxt.Size = new System.Drawing.Size(213, 25);
+            this.salarytxt.Size = new System.Drawing.Size(213, 29);
             this.salarytxt.TabIndex = 96;
             this.salarytxt.TabStop = false;
             // 
@@ -324,15 +324,15 @@
             // 
             this.datetxt.CalendarForeColor = System.Drawing.Color.DarkCyan;
             this.datetxt.CalendarMonthBackground = System.Drawing.Color.DarkCyan;
-            this.datetxt.CustomFormat = "yyyy-MM-dd";
+            this.datetxt.CustomFormat = "dd/MM/yyyy";
             this.datetxt.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datetxt.Location = new System.Drawing.Point(140, 133);
             this.datetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datetxt.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
             this.datetxt.MinDate = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
             this.datetxt.Name = "datetxt";
-            this.datetxt.Size = new System.Drawing.Size(213, 28);
+            this.datetxt.Size = new System.Drawing.Size(213, 34);
             this.datetxt.TabIndex = 93;
             // 
             // saveBtn
@@ -385,7 +385,7 @@
             this.label4.Location = new System.Drawing.Point(58, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
+            this.label4.Size = new System.Drawing.Size(93, 22);
             this.label4.TabIndex = 85;
             this.label4.Text = "Join Date:";
             // 
@@ -398,7 +398,7 @@
             this.emailtxt.Location = new System.Drawing.Point(140, 101);
             this.emailtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.emailtxt.Name = "emailtxt";
-            this.emailtxt.Size = new System.Drawing.Size(213, 25);
+            this.emailtxt.Size = new System.Drawing.Size(213, 29);
             this.emailtxt.TabIndex = 84;
             this.emailtxt.TabStop = false;
             // 
@@ -410,7 +410,7 @@
             this.label1.Location = new System.Drawing.Point(81, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(65, 22);
             this.label1.TabIndex = 83;
             this.label1.Text = "Email:";
             // 
@@ -422,7 +422,7 @@
             this.label2.Location = new System.Drawing.Point(55, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 17);
+            this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 82;
             this.label2.Text = "Phone No:";
             // 
@@ -434,7 +434,7 @@
             this.label3.Location = new System.Drawing.Point(18, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.Size = new System.Drawing.Size(145, 22);
             this.label3.TabIndex = 81;
             this.label3.Text = "Manager Name:";
             // 
@@ -446,7 +446,7 @@
             this.label5.Location = new System.Drawing.Point(41, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 17);
+            this.label5.Size = new System.Drawing.Size(115, 22);
             this.label5.TabIndex = 80;
             this.label5.Text = "Manager ID:";
             // 
@@ -459,7 +459,7 @@
             this.phonetxt.Location = new System.Drawing.Point(140, 69);
             this.phonetxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.phonetxt.Name = "phonetxt";
-            this.phonetxt.Size = new System.Drawing.Size(213, 25);
+            this.phonetxt.Size = new System.Drawing.Size(213, 29);
             this.phonetxt.TabIndex = 79;
             this.phonetxt.TabStop = false;
             // 
@@ -472,7 +472,7 @@
             this.nametxt.Location = new System.Drawing.Point(140, 37);
             this.nametxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(213, 25);
+            this.nametxt.Size = new System.Drawing.Size(213, 29);
             this.nametxt.TabIndex = 78;
             this.nametxt.TabStop = false;
             // 
@@ -486,13 +486,13 @@
             this.idtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.idtxt.Name = "idtxt";
             this.idtxt.ReadOnly = true;
-            this.idtxt.Size = new System.Drawing.Size(213, 25);
+            this.idtxt.Size = new System.Drawing.Size(213, 29);
             this.idtxt.TabIndex = 77;
             this.idtxt.TabStop = false;
             // 
             // ManageManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1001, 394);

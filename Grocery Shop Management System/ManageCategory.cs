@@ -133,12 +133,13 @@ namespace Grocery_Shop_Management_System
             }
             else
             {
-                query = "UPDATE Category SET name = '" + name + "' WHERE cid = '" + idtxt.Text + "'";
-
-                access.Command = new OracleCommand(query, access.Connection);
+                string updateCategoryQuery = "begin UpdateCategory(:p9, :p10); end;";
 
                 try
                 {
+                    access.Command = new OracleCommand(updateCategoryQuery, access.Connection);
+                    access.Command.Parameters.Add("p9", OracleDbType.Varchar2).Value = name;
+                    access.Command.Parameters.Add("p10", OracleDbType.Varchar2).Value = id;
                     if (access.Command.ExecuteNonQuery() == 0)
                     {
                         MessageBox.Show("Category Update Failed");
@@ -185,8 +186,10 @@ namespace Grocery_Shop_Management_System
                 }
             }
             catch (Exception ex)
+
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
+                MessageBox.Show("This Category has product/s, delete them first!");
             }
         }
 
