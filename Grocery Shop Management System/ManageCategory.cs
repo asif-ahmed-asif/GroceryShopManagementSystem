@@ -89,11 +89,6 @@ namespace Grocery_Shop_Management_System
             LoadCategoryInfo();
         }
 
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            LoadCategoryInfo();
-        }
-
         private void saveBtn_Click(object sender, EventArgs e)
         {
             string id = this.idtxt.Text;
@@ -226,6 +221,27 @@ namespace Grocery_Shop_Management_System
                 idtxt.Text = id;
                 this.LoadSingleCategory();
             }
+        }
+
+        private void searchtxt_TextChanged(object sender, EventArgs e)
+        {
+            DataAccess access = new DataAccess();
+
+            string query = "Select * from Category Where Category.name like '" + searchtxt.Text + "%' order by cid ASC";
+
+            access.Command = new OracleCommand(query, access.Connection);
+            access.Adapter = new OracleDataAdapter(access.Command);
+
+            DataTable dt = new DataTable();
+            access.Adapter.Fill(dt);
+
+            if (dt == null)
+                return;
+
+            categoryTable.AutoGenerateColumns = false;
+            categoryTable.DataSource = dt;
+            categoryTable.Refresh();
+            categoryTable.ClearSelection();
         }
     }
 }

@@ -160,11 +160,6 @@ namespace Grocery_Shop_Management_System
             LoadOrder();
             LoadCustomer();
         }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            LoadOrder();
-        }
         private void Check()
         {
             for (int i = orderView.Items.Count - 1; i >= 0; i--)
@@ -518,9 +513,46 @@ namespace Grocery_Shop_Management_System
             new Report.PrintInvoice().Show();
         }
 
-        private void csearchBtn_Click(object sender, EventArgs e)
+        private void searchtxt_TextChanged(object sender, EventArgs e)
         {
-            LoadCustomer();
+            DataAccess access = new DataAccess();
+
+            string query = "Select * from Product Where name like '" + searchtxt.Text + "%'";
+
+            access.Command = new OracleCommand(query, access.Connection);
+            access.Adapter = new OracleDataAdapter(access.Command);
+
+            DataTable dt = new DataTable();
+            access.Adapter.Fill(dt);
+
+            if (dt == null)
+                return;
+
+            sellTable.AutoGenerateColumns = false;
+            sellTable.DataSource = dt;
+            sellTable.Refresh();
+            sellTable.ClearSelection();
+        }
+
+        private void csearchtxt_TextChanged(object sender, EventArgs e)
+        {
+            DataAccess access = new DataAccess();
+
+            string query = "Select * from Member Where name like '" + csearchtxt.Text + "%'";
+
+            access.Command = new OracleCommand(query, access.Connection);
+            access.Adapter = new OracleDataAdapter(access.Command);
+
+            DataTable dt = new DataTable();
+            access.Adapter.Fill(dt);
+
+            if (dt == null)
+                return;
+
+            memberTable.AutoGenerateColumns = false;
+            memberTable.DataSource = dt;
+            memberTable.Refresh();
+            memberTable.ClearSelection();
         }
     }
 }

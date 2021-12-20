@@ -159,3 +159,8 @@ i.id, i.s_date, i.sub_total, s.pid, s.quantity, s.t_price, s.member_id, m.name, 
 FROM Member m, Sales s, Invoice i
 WHERE m.ID = s.MEMBER_ID
 AND s.INVOICE_ID = i.ID;
+
+CREATE VIEW top_sales AS SELECT
+p.pid, p.name, p.p_price, s.quantity, s.t_price, s.s_date
+FROM Product p, Sales s
+WHERE p.pid = s.pid;

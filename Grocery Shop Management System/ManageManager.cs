@@ -100,11 +100,6 @@ namespace Grocery_Shop_Management_System
             LoadManagerInfo();
         }
 
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            LoadManagerInfo();
-        }
-
         private void saveBtn_Click(object sender, EventArgs e)
         {
             string id = this.idtxt.Text;
@@ -268,6 +263,28 @@ namespace Grocery_Shop_Management_System
                 idtxt.Text = id;
                 this.LoadSingleManager();
             }
+        }
+
+        private void searchtxt_TextChanged(object sender, EventArgs e)
+        {
+            this.datetxt.MaxDate = DateTime.Now;
+            DataAccess access = new DataAccess();
+
+            string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 'm' And name like '" + searchtxt.Text + "%' order by id ASC";
+            
+            access.Command = new OracleCommand(query, access.Connection);
+            access.Adapter = new OracleDataAdapter(access.Command);
+
+            DataTable dt = new DataTable();
+            access.Adapter.Fill(dt);
+
+            if (dt == null)
+                return;
+
+            managerTable.AutoGenerateColumns = false;
+            managerTable.DataSource = dt;
+            managerTable.Refresh();
+            managerTable.ClearSelection();
         }
     }
 }
