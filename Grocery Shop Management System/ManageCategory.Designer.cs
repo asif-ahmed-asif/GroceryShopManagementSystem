@@ -30,8 +30,8 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.searchtxt = new System.Windows.Forms.TextBox();
-            this.searchBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -80,8 +80,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.searchtxt);
-            this.panel1.Controls.Add(this.searchBtn);
             this.panel1.Controls.Add(this.refreshBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 4);
@@ -90,37 +90,36 @@
             this.panel1.Size = new System.Drawing.Size(510, 41);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(343, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 22);
+            this.label1.TabIndex = 81;
+            this.label1.Text = "Search Category";
+            // 
             // searchtxt
             // 
             this.searchtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.searchtxt.Font = new System.Drawing.Font("Cambria", 12F);
             this.searchtxt.ForeColor = System.Drawing.Color.White;
-            this.searchtxt.Location = new System.Drawing.Point(149, 6);
+            this.searchtxt.Location = new System.Drawing.Point(118, 6);
             this.searchtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchtxt.Name = "searchtxt";
             this.searchtxt.Size = new System.Drawing.Size(218, 26);
             this.searchtxt.TabIndex = 11;
             this.searchtxt.TabStop = false;
-            // 
-            // searchBtn
-            // 
-            this.searchBtn.BackColor = System.Drawing.Color.Yellow;
-            this.searchBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold);
-            this.searchBtn.Location = new System.Drawing.Point(373, 2);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(88, 35);
-            this.searchBtn.TabIndex = 10;
-            this.searchBtn.TabStop = false;
-            this.searchBtn.Text = "Search";
-            this.searchBtn.UseVisualStyleBackColor = false;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            this.searchtxt.TextChanged += new System.EventHandler(this.searchtxt_TextChanged);
             // 
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
             this.refreshBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold);
-            this.refreshBtn.Location = new System.Drawing.Point(44, 2);
+            this.refreshBtn.Location = new System.Drawing.Point(13, 2);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(99, 35);
@@ -357,7 +356,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox searchtxt;
-        private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
@@ -374,5 +372,6 @@
         private System.Windows.Forms.TextBox idtxt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvmname;
+        private System.Windows.Forms.Label label1;
     }
 }

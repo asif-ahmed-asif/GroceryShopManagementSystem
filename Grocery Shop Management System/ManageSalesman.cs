@@ -119,12 +119,6 @@ namespace Grocery_Shop_Management_System
             searchtxt.Text = "";
             LoadSalesmanInfo();
         }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            LoadSalesmanInfo();
-        }
-
         private void saveBtn_Click(object sender, EventArgs e)
         {
             string id = this.idtxt.Text;
@@ -287,6 +281,27 @@ namespace Grocery_Shop_Management_System
                 idtxt.Text = id;
                 this.LoadSingleSalesman();
             }
+        }
+
+        private void searchtxt_TextChanged(object sender, EventArgs e)
+        {
+            DataAccess access = new DataAccess();
+
+            string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's' And name like '" + searchtxt.Text + "%' order by id ASC";
+            
+            access.Command = new OracleCommand(query, access.Connection);
+            access.Adapter = new OracleDataAdapter(access.Command);
+
+            DataTable dt = new DataTable();
+            access.Adapter.Fill(dt);
+
+            if (dt == null)
+                return;
+
+            salesmanTable.AutoGenerateColumns = false;
+            salesmanTable.DataSource = dt;
+            salesmanTable.Refresh();
+            salesmanTable.ClearSelection();
         }
     }
 }

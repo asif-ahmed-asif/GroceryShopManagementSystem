@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chartMostSoldProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartMostBenefitProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,45 +50,45 @@
             // 
             // chartMostSoldProduct
             // 
-            chartArea11.Name = "ChartArea1";
-            this.chartMostSoldProduct.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chartMostSoldProduct.Legends.Add(legend11);
+            chartArea1.Name = "ChartArea1";
+            this.chartMostSoldProduct.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartMostSoldProduct.Legends.Add(legend1);
             this.chartMostSoldProduct.Location = new System.Drawing.Point(12, 105);
             this.chartMostSoldProduct.Name = "chartMostSoldProduct";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Sales";
-            this.chartMostSoldProduct.Series.Add(series11);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Sales";
+            this.chartMostSoldProduct.Series.Add(series1);
             this.chartMostSoldProduct.Size = new System.Drawing.Size(641, 404);
             this.chartMostSoldProduct.TabIndex = 0;
             this.chartMostSoldProduct.Text = "chartMostSoldProduct";
-            title11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title11.Name = "Title1";
-            title11.ShadowColor = System.Drawing.Color.Black;
-            title11.Text = "Top sold Products";
-            this.chartMostSoldProduct.Titles.Add(title11);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.ShadowColor = System.Drawing.Color.Black;
+            title1.Text = "Top Sold Products";
+            this.chartMostSoldProduct.Titles.Add(title1);
             // 
             // chartMostBenefitProduct
             // 
-            chartArea12.Name = "ChartArea1";
-            this.chartMostBenefitProduct.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chartMostBenefitProduct.Legends.Add(legend12);
+            chartArea2.Name = "ChartArea1";
+            this.chartMostBenefitProduct.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMostBenefitProduct.Legends.Add(legend2);
             this.chartMostBenefitProduct.Location = new System.Drawing.Point(673, 105);
             this.chartMostBenefitProduct.Name = "chartMostBenefitProduct";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Benefit";
-            this.chartMostBenefitProduct.Series.Add(series12);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Benefit";
+            this.chartMostBenefitProduct.Series.Add(series2);
             this.chartMostBenefitProduct.Size = new System.Drawing.Size(659, 404);
             this.chartMostBenefitProduct.TabIndex = 1;
             this.chartMostBenefitProduct.Text = "chartMostBenefitProduct";
-            title12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title12.Name = "Title1";
-            title12.ShadowColor = System.Drawing.Color.Black;
-            title12.Text = "Top Benifited Products";
-            this.chartMostBenefitProduct.Titles.Add(title12);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.ShadowColor = System.Drawing.Color.Black;
+            title2.Text = "Top Benifited Products";
+            this.chartMostBenefitProduct.Titles.Add(title2);
             // 
             // label1
             // 
