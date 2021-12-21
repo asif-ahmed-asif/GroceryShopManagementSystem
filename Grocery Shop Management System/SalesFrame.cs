@@ -33,7 +33,8 @@ namespace Grocery_Shop_Management_System
         {
             DataAccess access = new DataAccess();
 
-            string query = "SELECT SUM(sales.t_price-sales.quantity*product.p_price) AS todays_benefit FROM product INNER JOIN sales ON sales.pid = product.pid WHERE sales.s_date = TO_CHAR(SYSDATE, 'YYYY-MM-DD')";
+            //string query = "SELECT SUM(sales.t_price-sales.quantity*product.p_price) AS todays_benefit FROM product INNER JOIN sales ON sales.pid = product.pid WHERE sales.s_date = TO_CHAR(SYSDATE, 'YYYY-MM-DD')";
+            string query = "SELECT SUM(t_price - quantity * p_price) AS todays_benefit FROM top_sales WHERE s_date = TO_CHAR(SYSDATE, 'YYYY-MM-DD')";
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);
@@ -52,7 +53,8 @@ namespace Grocery_Shop_Management_System
         {
             DataAccess access = new DataAccess();
 
-            string query = "SELECT SUM(sales.t_price-sales.quantity*product.p_price) AS todays_benefit FROM product INNER JOIN sales ON sales.pid = product.pid WHERE sales.s_date > TO_CHAR(SYSDATE - 30, 'YYYY-MM-DD') ";
+            //string query = "SELECT SUM(sales.t_price-sales.quantity*product.p_price) AS todays_benefit FROM product INNER JOIN sales ON sales.pid = product.pid WHERE sales.s_date > TO_CHAR(SYSDATE - 30, 'YYYY-MM-DD')";
+            string query = "SELECT SUM(t_price - quantity * p_price) AS todays_benefit FROM top_sales WHERE s_date > TO_CHAR(SYSDATE - 30, 'YYYY-MM-DD')";
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);
@@ -72,7 +74,8 @@ namespace Grocery_Shop_Management_System
             {
                 DataAccess access = new DataAccess();
 
-                string query = "select product.name, sum(sales.quantity) AS quantity from sales, product WHERE sales.pid = product.pid group by product.name order by quantity desc";
+                //string query = "select product.name, sum(sales.quantity) AS quantity from sales, product WHERE sales.pid = product.pid group by product.name order by quantity desc";
+                string query = "SELECT * FROM (select name, sum(quantity) AS quantity FROM top_sales group by name order by quantity desc) WHERE ROWNUM <= 5";
 
                 access.Command = new OracleCommand(query, access.Connection);
                 access.Adapter = new OracleDataAdapter(access.Command);
@@ -100,7 +103,8 @@ namespace Grocery_Shop_Management_System
             {
                 DataAccess access = new DataAccess();
 
-                string query = "select product.name, sum(sales.t_price-sales.quantity*product.p_price) AS benefit from sales, product WHERE sales.pid = product.pid group by product.name order by benefit desc";
+                //string query = "select product.name, sum(sales.t_price-sales.quantity*product.p_price) AS benefit from sales, product WHERE sales.pid = product.pid group by product.name order by benefit desc";
+                string query = "SELECT * FROM (select name, sum(t_price - quantity * p_price) AS benefit from top_sales group by name order by benefit desc) WHERE ROWNUM <= 5";
 
                 access.Command = new OracleCommand(query, access.Connection);
                 access.Adapter = new OracleDataAdapter(access.Command);
