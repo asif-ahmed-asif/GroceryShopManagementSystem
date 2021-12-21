@@ -1,0 +1,46 @@
+1. Mustafizur Rahman
+18-36179-1
+2. SIDDIKUR RAHMAN SHOHAN
+18-36667-1
+3. RAHAT MAKSUD PRANTO
+18-37675-1
+4. ASIF AHMED
+18-38441-2
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+create or replace procedure UpdateAdmin(nme admin.name%type, phon admin.phone%type, mail admin.email%type, adrss admin.address%type, i admin.user_id%type)
+ is 
+begin 
+update admin set name = nme,phone= phon, email = mail, address = adrss where user_id=i; 
+dbms_output.put_line('Done!'); 
+end;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+create or replace procedure UpdateCategory(cname category.name%type, ccid category.cid%type)
+ is 
+begin 
+update category set name = cname where cid = ccid; 
+dbms_output.put_line('Done!'); 
+end;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-
+
+create or replace procedure UpdateProduct(pnum product.name%type, pprice product.p_price%type, sprice product.s_price%type, quan product.quantity%type, ccid category.cid%type, ppid product.pid%type)
+ is 
+
+begin  
+update product set name = pnum, p_price = pprice, s_price = sprice, quantity = quan, cid = ccid where pid = ppid;
+dbms_output.put_line('Done!'); 
+
+end;
+
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------
+create or replace procedure UpdateEmployee(nme employee.name%type, phn employee.phone%type,
+adrs employee.address%type, sal employee.salary%type,jdate employee.join_date%type,
+mail employee.email%type, mr employee.mgr%type, uid employee.user_id%type)
+is
+
+begin
+update employee set name = nme, phone= phn, address = adrs, salary = sal, join_date = jdate, email = mail, mgr = mr where user_id = uid;
+dbms_output.put_line('Done!');
+end ;
