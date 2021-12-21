@@ -72,7 +72,7 @@ namespace Grocery_Shop_Management_System
             {
                 DataAccess access = new DataAccess();
 
-                string query = "SELECT product.name, sales.t_price, sales.quantity, sales.s_date, sales.t_price-sales.quantity*product.p_price AS benefit FROM product INNER JOIN sales ON sales.pid = product.pid WHERE ROWNUM <= 5 ORDER BY quantity DESC, sales.s_date DESC";
+                string query = "select product.name, sum(sales.quantity) AS quantity from sales, product WHERE sales.pid = product.pid group by product.name order by quantity desc";
 
                 access.Command = new OracleCommand(query, access.Connection);
                 access.Adapter = new OracleDataAdapter(access.Command);
@@ -100,7 +100,7 @@ namespace Grocery_Shop_Management_System
             {
                 DataAccess access = new DataAccess();
 
-                string query = "SELECT product.name, sales.t_price, sales.quantity, sales.s_date, sales.t_price-sales.quantity*product.p_price AS benefit FROM product INNER JOIN sales ON sales.pid = product.pid WHERE ROWNUM <= 5 ORDER BY benefit DESC, sales.s_date DESC";
+                string query = "select product.name, sum(sales.t_price-sales.quantity*product.p_price) AS benefit from sales, product WHERE sales.pid = product.pid group by product.name order by benefit desc";
 
                 access.Command = new OracleCommand(query, access.Connection);
                 access.Adapter = new OracleDataAdapter(access.Command);
