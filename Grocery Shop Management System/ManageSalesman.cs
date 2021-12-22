@@ -60,10 +60,10 @@ namespace Grocery_Shop_Management_System
             string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's' order by id ASC";
             //string query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's'";
 
-            if (string.IsNullOrEmpty(searchtxt.Text) == false)
+            /*if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
                 query = "Select * from employee e, login l where l.user_id = e.user_id and type = 's' And name like '%" + searchtxt.Text + "%'";
-            }
+            }*/
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);
