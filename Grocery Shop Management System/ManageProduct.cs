@@ -60,11 +60,11 @@ namespace Grocery_Shop_Management_System
             string query = "Select * from Product order by pid ASC";
             //string query = "Select * from Product";
 
-            if (string.IsNullOrEmpty(searchtxt.Text) == false)
+            /*if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
                 //query = query + " Where name like '%" + searchtxt.Text + "%'";
                 query = "Select * from Product Where name like '%" + searchtxt.Text + "%'";
-            }
+            }*/
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);

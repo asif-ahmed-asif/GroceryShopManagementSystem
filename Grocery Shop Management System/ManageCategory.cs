@@ -34,11 +34,11 @@ namespace Grocery_Shop_Management_System
             string query = "Select * from Category order by cid ASC";
             //string query = "Select * from Category";
 
-            if (string.IsNullOrEmpty(searchtxt.Text) == false)
+            /*if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
                 //query = query + " Where Category.name like '%" + searchtxt.Text + "%'";
                 query = "Select * from Category Where Category.name like '%" + searchtxt.Text + "%'";
-            }
+            }*/
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);

@@ -51,10 +51,10 @@ namespace Grocery_Shop_Management_System
 
             string query = "Select * from Product";
 
-            if (string.IsNullOrEmpty(searchtxt.Text) == false)
+            /*if (string.IsNullOrEmpty(searchtxt.Text) == false)
             {
                 query = query + " Where name like '%" + searchtxt.Text + "%'";
-            }
+            }*/
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);
@@ -78,10 +78,10 @@ namespace Grocery_Shop_Management_System
 
             string query = "Select * from Member";
 
-            if (string.IsNullOrEmpty(csearchtxt.Text) == false)
+            /*if (string.IsNullOrEmpty(csearchtxt.Text) == false)
             {
                 query = query + " Where name like '%" + csearchtxt.Text + "%'";
-            }
+            }*/
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);
