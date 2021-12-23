@@ -16,5 +16,10 @@
     
 ![admin_frame](https://user-images.githubusercontent.com/38969976/147206304-0492e262-8a37-4fa6-b7e1-37fef9e7be87.png)
     
-    
 ![product](https://user-images.githubusercontent.com/38969976/147206355-e1b22c3b-9e2a-4ab1-9074-b9bf4ff50488.png)
+    
+![sales_frame](https://user-images.githubusercontent.com/38969976/147206419-04005c0a-bca3-45a7-b2bc-7e08c718419f.png)
+
+![invoice](https://user-images.githubusercontent.com/38969976/147206423-1e313719-8340-490b-bbe2-2924d3b986d7.png)
+
+![sales_report](https://user-images.githubusercontent.com/38969976/147206431-1eb99114-dfe3-4493-9322-6a5382952825.png)
