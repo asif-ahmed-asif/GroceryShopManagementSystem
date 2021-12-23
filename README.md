@@ -12,35 +12,11 @@
     </p>
 </div>
 
-<div>
-    <p>Some frames of the Project:<p>
-    <div style="margin: 0 auto">
-        <div>   
-            ![admin_frame](https://user-images.githubusercontent.com/38969976/147206009-30bfc47e-3922-4592-aeb0-3eb2299f6dc0.png)
-            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Log In Screen</p></div>
-        </div>
-        <div>
-            ![product](https://user-images.githubusercontent.com/38969976/147205564-eddb9a4b-3ed0-4870-a86b-cb53ec223791.png)
-            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Whole inventory list showing the various details of each product</p></div>
-        </div>
-        <div>
-            ![sales_frame](https://user-images.githubusercontent.com/38969976/147205578-61777efd-9e62-419d-aa1a-e001a0e99144.png)
-            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: The item sets and their support value (likeliness to be bought together)</p></div>
-        </div>
-        <div>
-            ![invoice](https://user-images.githubusercontent.com/38969976/147205580-8cdc01e7-4c4e-459c-beba-1240aa2aaa90.png)
-            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Table of items for restock</p></div>
-            <div>
-            ![sales_report](https://user-images.githubusercontent.com/38969976/147205583-99c9d633-ff6a-4cdd-ac30-c1a5c1ed1a91.png)
-            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Log In Screen</p></div>
-        </div>
-        </div>
-    </div>
-</div>
-</br>
+<p>Some frames of the Project:<p>
+![admin_frame](https://user-images.githubusercontent.com/38969976/147206180-50992a1d-c5d9-4e16-a9f4-6221a9df6680.png)
+![product](https://user-images.githubusercontent.com/38969976/147206185-80a16d3e-f14c-4123-968f-cae6a057fc77.png)
+![sales_frame](https://user-images.githubusercontent.com/38969976/147206188-3ff5827c-2cf5-4843-979a-f283831c88ac.png)
+![invoice](https://user-images.githubusercontent.com/38969976/147206193-45aa443b-3461-4a8a-8692-cbb5c737d626.png)
+![sales_report](https://user-images.githubusercontent.com/38969976/147206210-adec1fa4-22a2-4a35-9407-9767cc6abd1a.png)
 
-
-
-
-
-
+    
