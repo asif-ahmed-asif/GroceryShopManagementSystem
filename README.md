@@ -12,11 +12,6 @@
     </p>
 </div>
 
-<p>Some frames of the Project:<p>
-![admin_frame](https://user-images.githubusercontent.com/38969976/147206180-50992a1d-c5d9-4e16-a9f4-6221a9df6680.png)
-![product](https://user-images.githubusercontent.com/38969976/147206185-80a16d3e-f14c-4123-968f-cae6a057fc77.png)
-![sales_frame](https://user-images.githubusercontent.com/38969976/147206188-3ff5827c-2cf5-4843-979a-f283831c88ac.png)
-![invoice](https://user-images.githubusercontent.com/38969976/147206193-45aa443b-3461-4a8a-8692-cbb5c737d626.png)
-![sales_report](https://user-images.githubusercontent.com/38969976/147206210-adec1fa4-22a2-4a35-9407-9767cc6abd1a.png)
 
     
+![admin_frame](https://user-images.githubusercontent.com/38969976/147206304-0492e262-8a37-4fa6-b7e1-37fef9e7be87.png)
