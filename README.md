@@ -12,3 +12,31 @@
     </p>
 </div>
 
+<div>
+    <p>Some frames of the Project:<p>
+    <div style="margin: 0 auto">
+        <div>
+            <img src="![admin_frame](https://user-images.githubusercontent.com/38969976/147205556-cc135eb6-0624-4dd0-8eb8-8d10faf4cdc9.png)"/>
+            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Log In Screen</p></div>
+        </div>
+        <div>
+            <img src="![product](https://user-images.githubusercontent.com/38969976/147205564-eddb9a4b-3ed0-4870-a86b-cb53ec223791.png)"/>
+            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Whole inventory list showing the various details of each product</p></div>
+        </div>
+        <div>
+            <img src="![sales_frame](https://user-images.githubusercontent.com/38969976/147205578-61777efd-9e62-419d-aa1a-e001a0e99144.png)"/>
+            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: The item sets and their support value (likeliness to be bought together)</p></div>
+        </div>
+        <div>
+            <img src="![invoice](https://user-images.githubusercontent.com/38969976/147205580-8cdc01e7-4c4e-459c-beba-1240aa2aaa90.png)"/>
+            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Table of items for restock</p></div>
+            <div>
+            <img src="![sales_report](https://user-images.githubusercontent.com/38969976/147205583-99c9d633-ff6a-4cdd-ac30-c1a5c1ed1a91.png)"/>
+            <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Log In Screen</p></div>
+        </div>
+        </div>
+    </div>
+</div>
+</br>
+
+
