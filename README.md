@@ -15,8 +15,8 @@
 <div>
     <p>Some frames of the Project:<p>
     <div style="margin: 0 auto">
-        <div>
-            ![admin_frame](https://user-images.githubusercontent.com/38969976/147205556-cc135eb6-0624-4dd0-8eb8-8d10faf4cdc9.png)
+        <div>   
+            ![admin_frame](https://user-images.githubusercontent.com/38969976/147206009-30bfc47e-3922-4592-aeb0-3eb2299f6dc0.png)
             <div style="text-align:center; font-size:20px;font-weight:bold;background-color:aliceblue;padding:10px;margin:10px auto;"><p>Image: Log In Screen</p></div>
         </div>
         <div>
