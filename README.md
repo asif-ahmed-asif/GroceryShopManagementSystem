@@ -24,15 +24,14 @@
 
 ![sales_report](https://user-images.githubusercontent.com/38969976/147206431-1eb99114-dfe3-4493-9322-6a5382952825.png)
 
-    <div>
-    <p>
+<p>
         Backend of this project was implemented using:
         <ul>
             <li>C#: for front end UI</li>
             <li>Database: Oracle (Pl SQL, Procedure, Triggers, Package, Exception Handling)</li>
         </ul>
-    </p>
-    <p>
+</p>
+<p>
         Developed by: 
         <ul>
             <li><a href="https://github.com/Fahim59">Mustafizur Rahman</a>: Implemented front end frames and backend coding.</li>
@@ -40,5 +39,4 @@
             <li><a href="https://github.com/SiddikurRahmanShohan">Siddikur Rahman Shohan</a>:  Implemented Advanced Queries.</li>
             <li><a href="https://github.com/prantorahat007">Rahat Maksud Pranto</a>:  Implemented the front end frames.</li>
         </ul>
-    </p>
-</div>
+</p>
