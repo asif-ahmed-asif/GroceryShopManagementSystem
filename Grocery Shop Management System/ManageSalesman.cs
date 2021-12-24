@@ -30,6 +30,7 @@ namespace Grocery_Shop_Management_System
             datetxt.Text = "";
             salarytxt.Text = "";
             addresstxt.Text = "";
+            passtxt.Text = "";
 
             salesmanTable.ClearSelection();
         }
@@ -85,7 +86,8 @@ namespace Grocery_Shop_Management_System
         {
             DataAccess access = new DataAccess();
 
-            string query = "Select * from Employee Where user_id = '" + idtxt.Text + "'";
+            //string query = "Select * from Employee Where user_id = '" + idtxt.Text + "'";
+            string query = "Select * from(Select e.*, l.password from employee e, login l where l.user_id = e.user_id) where user_id = '" + idtxt.Text + "'";
 
             access.Command = new OracleCommand(query, access.Connection);
             access.Adapter = new OracleDataAdapter(access.Command);
@@ -112,6 +114,7 @@ namespace Grocery_Shop_Management_System
             salarytxt.Text = dt.Rows[0]["salary"].ToString();
             addresstxt.Text = dt.Rows[0]["address"].ToString();
             mgrtxt.Text = dt.Rows[0]["mgr"].ToString();
+            passtxt.Text = dt.Rows[0]["password"].ToString();
         }
 
         private void refreshBtn_Click(object sender, EventArgs e)
@@ -230,7 +233,7 @@ namespace Grocery_Shop_Management_System
                     access.Command = new OracleCommand(query1, access.Connection);
 
                     access.Command.ExecuteNonQuery();
-                    MessageBox.Show("Manager Deleted Successfully");
+                    MessageBox.Show("Salesman Deleted Successfully");
 
                     this.LoadSalesmanInfo();
                     this.Refresh();

@@ -554,5 +554,12 @@ namespace Grocery_Shop_Management_System
             memberTable.Refresh();
             memberTable.ClearSelection();
         }
+
+        private void passBtn_Click(object sender, EventArgs e)
+        {
+            Change_Password cp = new Change_Password();
+            cp.Show(this);
+            this.Hide();
+        }
     }
 }

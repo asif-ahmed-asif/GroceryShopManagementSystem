@@ -13,7 +13,7 @@ namespace Grocery_Shop_Management_System
 {
     public partial class Login : Form
     {
-        public static string a;
+        public static string a, b;
         public Login()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace Grocery_Shop_Management_System
         private void loginbtn_Click(object sender, EventArgs e)
         {
             a = usertxt.Text;
+            b = passtxt.Text;
 
             string uid = this.usertxt.Text;
             string pass = this.passtxt.Text;
