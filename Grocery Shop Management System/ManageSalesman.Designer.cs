@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.searchtxt = new System.Windows.Forms.TextBox();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,6 +42,8 @@
             this.dgvsalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvjdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.passtxt = new System.Windows.Forms.TextBox();
             this.mgrtxt = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.addresstxt = new System.Windows.Forms.RichTextBox();
@@ -61,7 +64,6 @@
             this.phonetxt = new System.Windows.Forms.TextBox();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.idtxt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,7 +89,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 425);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 451);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -103,6 +105,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(622, 41);
             this.panel1.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(428, 8);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(156, 22);
+            this.label9.TabIndex = 83;
+            this.label9.Text = "Search Salesman";
             // 
             // searchtxt
             // 
@@ -161,7 +175,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 53);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(622, 368);
+            this.panel3.Size = new System.Drawing.Size(622, 394);
             this.panel3.TabIndex = 2;
             // 
             // salesmanTable
@@ -182,7 +196,7 @@
             this.salesmanTable.Name = "salesmanTable";
             this.salesmanTable.ReadOnly = true;
             this.salesmanTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.salesmanTable.Size = new System.Drawing.Size(622, 368);
+            this.salesmanTable.Size = new System.Drawing.Size(622, 394);
             this.salesmanTable.TabIndex = 0;
             this.salesmanTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesmanTable_CellClick);
             // 
@@ -222,6 +236,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.passtxt);
             this.panel4.Controls.Add(this.mgrtxt);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.addresstxt);
@@ -246,8 +262,34 @@
             this.panel4.Location = new System.Drawing.Point(631, 53);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(367, 368);
+            this.panel4.Size = new System.Drawing.Size(367, 394);
             this.panel4.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(54, 312);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 17);
+            this.label11.TabIndex = 115;
+            this.label11.Text = "Password:";
+            // 
+            // passtxt
+            // 
+            this.passtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.passtxt.CausesValidation = false;
+            this.passtxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.passtxt.ForeColor = System.Drawing.Color.White;
+            this.passtxt.Location = new System.Drawing.Point(140, 308);
+            this.passtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.passtxt.Name = "passtxt";
+            this.passtxt.ReadOnly = true;
+            this.passtxt.Size = new System.Drawing.Size(213, 25);
+            this.passtxt.TabIndex = 114;
+            this.passtxt.TabStop = false;
             // 
             // mgrtxt
             // 
@@ -255,7 +297,7 @@
             this.mgrtxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.mgrtxt.ForeColor = System.Drawing.Color.White;
             this.mgrtxt.FormattingEnabled = true;
-            this.mgrtxt.Location = new System.Drawing.Point(140, 292);
+            this.mgrtxt.Location = new System.Drawing.Point(140, 276);
             this.mgrtxt.Name = "mgrtxt";
             this.mgrtxt.Size = new System.Drawing.Size(213, 25);
             this.mgrtxt.TabIndex = 113;
@@ -266,7 +308,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(88, 296);
+            this.label8.Location = new System.Drawing.Point(88, 280);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 17);
@@ -278,7 +320,7 @@
             this.addresstxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.addresstxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addresstxt.ForeColor = System.Drawing.Color.White;
-            this.addresstxt.Location = new System.Drawing.Point(140, 198);
+            this.addresstxt.Location = new System.Drawing.Point(140, 183);
             this.addresstxt.Name = "addresstxt";
             this.addresstxt.Size = new System.Drawing.Size(211, 88);
             this.addresstxt.TabIndex = 109;
@@ -289,7 +331,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(64, 201);
+            this.label7.Location = new System.Drawing.Point(64, 186);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
@@ -300,7 +342,7 @@
             // 
             this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.delBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delBtn.Location = new System.Drawing.Point(92, 328);
+            this.delBtn.Location = new System.Drawing.Point(92, 357);
             this.delBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(90, 35);
@@ -315,7 +357,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(77, 171);
+            this.label10.Location = new System.Drawing.Point(77, 158);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 17);
@@ -328,7 +370,7 @@
             this.salarytxt.CausesValidation = false;
             this.salarytxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.salarytxt.ForeColor = System.Drawing.Color.White;
-            this.salarytxt.Location = new System.Drawing.Point(140, 167);
+            this.salarytxt.Location = new System.Drawing.Point(140, 154);
             this.salarytxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.salarytxt.Name = "salarytxt";
             this.salarytxt.Size = new System.Drawing.Size(213, 25);
@@ -341,8 +383,8 @@
             this.datetxt.CalendarMonthBackground = System.Drawing.Color.DarkCyan;
             this.datetxt.CustomFormat = "dd/MM/yyyy";
             this.datetxt.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datetxt.Location = new System.Drawing.Point(140, 133);
+            this.datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datetxt.Location = new System.Drawing.Point(140, 122);
             this.datetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datetxt.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
             this.datetxt.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
@@ -354,7 +396,7 @@
             // 
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(157)))), ((int)(((byte)(68)))));
             this.saveBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(2, 328);
+            this.saveBtn.Location = new System.Drawing.Point(2, 357);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(88, 35);
@@ -368,7 +410,7 @@
             // 
             this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.logoutBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(276, 328);
+            this.logoutBtn.Location = new System.Drawing.Point(276, 357);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(90, 35);
@@ -382,7 +424,7 @@
             // 
             this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
             this.backBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(185, 328);
+            this.backBtn.Location = new System.Drawing.Point(185, 357);
             this.backBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(88, 35);
@@ -397,7 +439,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(58, 138);
+            this.label4.Location = new System.Drawing.Point(58, 127);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 17);
@@ -410,7 +452,7 @@
             this.emailtxt.CausesValidation = false;
             this.emailtxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.emailtxt.ForeColor = System.Drawing.Color.White;
-            this.emailtxt.Location = new System.Drawing.Point(140, 101);
+            this.emailtxt.Location = new System.Drawing.Point(140, 92);
             this.emailtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.Size = new System.Drawing.Size(213, 25);
@@ -422,7 +464,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(81, 106);
+            this.label1.Location = new System.Drawing.Point(81, 97);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
@@ -434,7 +476,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 74);
+            this.label2.Location = new System.Drawing.Point(55, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
@@ -446,7 +488,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(13, 41);
+            this.label3.Location = new System.Drawing.Point(13, 37);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 17);
@@ -471,7 +513,7 @@
             this.phonetxt.CausesValidation = false;
             this.phonetxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.phonetxt.ForeColor = System.Drawing.Color.White;
-            this.phonetxt.Location = new System.Drawing.Point(140, 69);
+            this.phonetxt.Location = new System.Drawing.Point(140, 62);
             this.phonetxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.phonetxt.Name = "phonetxt";
             this.phonetxt.Size = new System.Drawing.Size(213, 25);
@@ -484,7 +526,7 @@
             this.nametxt.CausesValidation = false;
             this.nametxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.nametxt.ForeColor = System.Drawing.Color.White;
-            this.nametxt.Location = new System.Drawing.Point(140, 37);
+            this.nametxt.Location = new System.Drawing.Point(140, 33);
             this.nametxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.nametxt.Name = "nametxt";
             this.nametxt.Size = new System.Drawing.Size(213, 25);
@@ -505,24 +547,12 @@
             this.idtxt.TabIndex = 77;
             this.idtxt.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(428, 8);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(156, 22);
-            this.label9.TabIndex = 83;
-            this.label9.Text = "Search Salesman";
-            // 
             // ManageSalesman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1001, 425);
+            this.ClientSize = new System.Drawing.Size(1001, 451);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -580,5 +610,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox mgrtxt;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox passtxt;
     }
 }

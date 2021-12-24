@@ -60,6 +60,8 @@
             this.phonetxt = new System.Windows.Forms.TextBox();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.idtxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.passtxt = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,7 +87,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 394);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 427);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -171,7 +173,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 53);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(622, 337);
+            this.panel3.Size = new System.Drawing.Size(622, 370);
             this.panel3.TabIndex = 2;
             // 
             // managerTable
@@ -192,7 +194,7 @@
             this.managerTable.Name = "managerTable";
             this.managerTable.ReadOnly = true;
             this.managerTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.managerTable.Size = new System.Drawing.Size(622, 337);
+            this.managerTable.Size = new System.Drawing.Size(622, 370);
             this.managerTable.TabIndex = 0;
             this.managerTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.managerTable_CellClick);
             // 
@@ -232,6 +234,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.passtxt);
             this.panel4.Controls.Add(this.addresstxt);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.delBtn);
@@ -254,7 +258,7 @@
             this.panel4.Location = new System.Drawing.Point(631, 53);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(367, 337);
+            this.panel4.Size = new System.Drawing.Size(367, 370);
             this.panel4.TabIndex = 3;
             // 
             // addresstxt
@@ -262,7 +266,7 @@
             this.addresstxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.addresstxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addresstxt.ForeColor = System.Drawing.Color.White;
-            this.addresstxt.Location = new System.Drawing.Point(140, 198);
+            this.addresstxt.Location = new System.Drawing.Point(140, 232);
             this.addresstxt.Name = "addresstxt";
             this.addresstxt.Size = new System.Drawing.Size(211, 88);
             this.addresstxt.TabIndex = 109;
@@ -273,7 +277,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(64, 201);
+            this.label7.Location = new System.Drawing.Point(65, 235);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
@@ -284,7 +288,7 @@
             // 
             this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.delBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delBtn.Location = new System.Drawing.Point(92, 297);
+            this.delBtn.Location = new System.Drawing.Point(92, 329);
             this.delBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(90, 35);
@@ -299,7 +303,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(77, 169);
+            this.label10.Location = new System.Drawing.Point(78, 171);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 17);
@@ -312,7 +316,7 @@
             this.salarytxt.CausesValidation = false;
             this.salarytxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.salarytxt.ForeColor = System.Drawing.Color.White;
-            this.salarytxt.Location = new System.Drawing.Point(140, 165);
+            this.salarytxt.Location = new System.Drawing.Point(140, 167);
             this.salarytxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.salarytxt.Name = "salarytxt";
             this.salarytxt.Size = new System.Drawing.Size(213, 25);
@@ -325,7 +329,7 @@
             this.datetxt.CalendarMonthBackground = System.Drawing.Color.DarkCyan;
             this.datetxt.CustomFormat = "dd/MM/yyyy";
             this.datetxt.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datetxt.Location = new System.Drawing.Point(140, 133);
             this.datetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datetxt.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
@@ -338,7 +342,7 @@
             // 
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(157)))), ((int)(((byte)(68)))));
             this.saveBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(2, 297);
+            this.saveBtn.Location = new System.Drawing.Point(2, 329);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(88, 35);
@@ -352,7 +356,7 @@
             // 
             this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.logoutBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(276, 297);
+            this.logoutBtn.Location = new System.Drawing.Point(276, 329);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(90, 35);
@@ -366,7 +370,7 @@
             // 
             this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(186)))));
             this.backBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(185, 297);
+            this.backBtn.Location = new System.Drawing.Point(185, 329);
             this.backBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(88, 35);
@@ -381,7 +385,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(58, 138);
+            this.label4.Location = new System.Drawing.Point(59, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 17);
@@ -406,7 +410,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(81, 106);
+            this.label1.Location = new System.Drawing.Point(82, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
@@ -418,7 +422,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 74);
+            this.label2.Location = new System.Drawing.Point(56, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
@@ -430,7 +434,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(18, 41);
+            this.label3.Location = new System.Drawing.Point(19, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 17);
@@ -442,7 +446,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(41, 10);
+            this.label5.Location = new System.Drawing.Point(42, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 17);
@@ -489,12 +493,38 @@
             this.idtxt.TabIndex = 77;
             this.idtxt.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(54, 204);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 17);
+            this.label9.TabIndex = 111;
+            this.label9.Text = "Password:";
+            // 
+            // passtxt
+            // 
+            this.passtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.passtxt.CausesValidation = false;
+            this.passtxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.passtxt.ForeColor = System.Drawing.Color.White;
+            this.passtxt.Location = new System.Drawing.Point(140, 200);
+            this.passtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.passtxt.Name = "passtxt";
+            this.passtxt.ReadOnly = true;
+            this.passtxt.Size = new System.Drawing.Size(213, 25);
+            this.passtxt.TabIndex = 110;
+            this.passtxt.TabStop = false;
+            // 
             // ManageManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1001, 394);
+            this.ClientSize = new System.Drawing.Size(1001, 427);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -550,5 +580,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvsalary;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvjdate;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox passtxt;
     }
 }

@@ -72,5 +72,12 @@ namespace Grocery_Shop_Management_System
 
             logintxt.Text = dt.Rows[0]["name"].ToString();
         }
+
+        private void passBtn_Click(object sender, EventArgs e)
+        {
+            Change_Password cp = new Change_Password();
+            cp.Show(this);
+            this.Hide();
+        }
     }
 }

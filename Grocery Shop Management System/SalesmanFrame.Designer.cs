@@ -30,6 +30,8 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.csearchtxt = new System.Windows.Forms.TextBox();
             this.searchtxt = new System.Windows.Forms.TextBox();
             this.refreshBtn = new System.Windows.Forms.Button();
@@ -83,8 +85,7 @@
             this.qtxt = new System.Windows.Forms.TextBox();
             this.saveBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.passBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -112,7 +113,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(972, 690);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(972, 725);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // panel1
@@ -130,6 +131,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(603, 41);
             this.panel1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(514, 10);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 19);
+            this.label11.TabIndex = 155;
+            this.label11.Text = "C. Search";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(268, 11);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 19);
+            this.label10.TabIndex = 154;
+            this.label10.Text = "P. Search";
             // 
             // csearchtxt
             // 
@@ -209,7 +234,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 53);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(603, 633);
+            this.panel3.Size = new System.Drawing.Size(603, 668);
             this.panel3.TabIndex = 2;
             // 
             // memberTable
@@ -276,7 +301,7 @@
             this.nettxt.CausesValidation = false;
             this.nettxt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nettxt.ForeColor = System.Drawing.Color.White;
-            this.nettxt.Location = new System.Drawing.Point(420, 403);
+            this.nettxt.Location = new System.Drawing.Point(420, 402);
             this.nettxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nettxt.Name = "nettxt";
             this.nettxt.ReadOnly = true;
@@ -342,7 +367,7 @@
             this.orderView.GridLines = true;
             this.orderView.Location = new System.Drawing.Point(2, 435);
             this.orderView.Name = "orderView";
-            this.orderView.Size = new System.Drawing.Size(603, 193);
+            this.orderView.Size = new System.Drawing.Size(603, 233);
             this.orderView.TabIndex = 157;
             this.orderView.TabStop = false;
             this.orderView.UseCompatibleStateImageBehavior = false;
@@ -428,6 +453,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.passBtn);
             this.panel4.Controls.Add(this.logintxt);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.invoiceBtn);
@@ -459,14 +485,14 @@
             this.panel4.Location = new System.Drawing.Point(612, 53);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(357, 633);
+            this.panel4.Size = new System.Drawing.Size(357, 668);
             this.panel4.TabIndex = 3;
             // 
             // logintxt
             // 
             this.logintxt.AutoSize = true;
             this.logintxt.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold);
-            this.logintxt.Location = new System.Drawing.Point(163, 593);
+            this.logintxt.Location = new System.Drawing.Point(163, 632);
             this.logintxt.Name = "logintxt";
             this.logintxt.Size = new System.Drawing.Size(26, 30);
             this.logintxt.TabIndex = 162;
@@ -476,7 +502,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(14, 593);
+            this.label9.Location = new System.Drawing.Point(14, 632);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(156, 30);
             this.label9.TabIndex = 161;
@@ -680,7 +706,7 @@
             this.dtxt.CustomFormat = "yyyy-MM-dd";
             this.dtxt.Enabled = false;
             this.dtxt.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtxt.Location = new System.Drawing.Point(145, 162);
             this.dtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtxt.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
@@ -804,36 +830,26 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // label10
+            // passBtn
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(268, 11);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 19);
-            this.label10.TabIndex = 154;
-            this.label10.Text = "P. Search";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(514, 10);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 19);
-            this.label11.TabIndex = 155;
-            this.label11.Text = "C. Search";
+            this.passBtn.BackColor = System.Drawing.Color.Yellow;
+            this.passBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold);
+            this.passBtn.Location = new System.Drawing.Point(96, 594);
+            this.passBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passBtn.Name = "passBtn";
+            this.passBtn.Size = new System.Drawing.Size(176, 36);
+            this.passBtn.TabIndex = 163;
+            this.passBtn.TabStop = false;
+            this.passBtn.Text = "Change Password";
+            this.passBtn.UseVisualStyleBackColor = false;
+            this.passBtn.Click += new System.EventHandler(this.passBtn_Click);
             // 
             // SalesmanFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(972, 690);
+            this.ClientSize = new System.Drawing.Size(972, 725);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -917,6 +933,7 @@
         private System.Windows.Forms.TextBox csearchtxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button passBtn;
 
     }
 }
